@@ -7,9 +7,10 @@ baseurl: "/"
 url: http://www.cofounders.sg/legal
 exclude:
 - .gitignore
-- README.md
-- LICENSE.md
+- CONTRIBUTING.md
 - Gemfile
+- LICENSE.md
+- README.md
 
 owner:
   name: Cofounders Pte Ltd
