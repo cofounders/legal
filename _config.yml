@@ -1,0 +1,27 @@
+safe: true
+lsi: false
+pygments: true
+source: .
+permalink: /:title/
+baseurl: "/"
+url: http://www.cofounders.sg/legal
+exclude:
+- .gitignore
+- README.md
+- LICENSE.md
+- Gemfile
+
+owner:
+  name: Cofounders Pte Ltd
+  contact: mailto:hello@cofounders.sg
+  github: https://github.com/cofounders
+  facebook: https://www.facebook.com/cofounders.sg
+
+license:
+  name: CC-BY-SA
+  url: http://creativecommons.org/licenses/by-sa/3.0/
+
+analytics:
+  provider: google
+  google:
+    id: UA-32876029-1

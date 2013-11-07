@@ -11,11 +11,3 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 Copyright &copy; 2013 [Huifen Zheng](http://aicalico.com/), [Bernard Leong](http://www.bernardleong.com/)
 
 [Creative Commons Attribution 3.0 Singapore (CC BY 3.0 SG)](http://creativecommons.org/licenses/by/3.0/sg/deed.en_US)
-
-## Disclaimer
-
-The templates are free for use, however the authors (Bernard and Huifen) and Cofounders.SG cannot be responsible for the consequences of use.
-
-Startups and investors alike should read and understand the templates and determine the suitability for their particular situation. If in doubt, you should consult professional advisors.
-
-The authors welcome questions and comments to improve the templates but they are not able to consult for free as they have their day jobs.
