@@ -6,11 +6,9 @@ permalink: /:title/
 baseurl: "/"
 url: http://www.cofounders.sg/legal
 exclude:
-- .gitignore
-- CONTRIBUTING.md
-- Gemfile
-- LICENSE.md
-- README.md
+- ".*"
+- "*.md"
+- "Gemfile*"
 
 owner:
   name: Cofounders Pte Ltd
