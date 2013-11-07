@@ -1,1 +1,333 @@
 @charset 'utf-8';
+
+/* Third party fonts
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Crimson+Text:400italic);
+
+/* Cofounders logo font with custom glyph
+ */
+
+@font-face {
+  font-family: 'League Gothic';
+  src: url('http://www.cofounders.sg/fonts/League_Gothic-webfont.eot');
+  src: url('http://www.cofounders.sg/fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('http://www.cofounders.sg/fonts/League_Gothic-webfont.woff') format('woff'),
+    url('http://www.cofounders.sg/fonts/League_Gothic-webfont.ttf') format('truetype'),
+    url('http://www.cofounders.sg/fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'League Gothic CFSG';
+  src: url('http://www.cofounders.sg/fonts/LeagueGothic-CFSG.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font icons
+ */
+
+@font-face {
+  font-family: 'cfsg-icon-fonts';
+  src: url('http://www.cofounders.sg/fonts/cfsg-icon-fonts.eot');
+  src: url('http://www.cofounders.sg/fonts/cfsg-icon-fonts.eot?#iefix') format('embedded-opentype'),
+    url('http://www.cofounders.sg/fonts/cfsg-icon-fonts.ttf') format('truetype'),
+    url('http://www.cofounders.sg/fonts/cfsg-icon-fonts.svg#cfsg-icon-fonts') format('svg'),
+    url('http://www.cofounders.sg/fonts/cfsg-icon-fonts.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Site structure
+ */
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+body > section {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-attachment: fixed;
+  min-height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+}
+body > section > article {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  -webkit-flex: auto;
+  flex: auto;
+  min-height: 300px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+body > section > article > header > h1 {
+  margin: 20px 0 0 0;
+}
+body > section > article > * {
+  -webkit-flex: none;
+  flex: none;
+}
+
+@media (max-width: 768px) {
+  body > section > article {
+    max-width: 100%;
+  }
+  body > section {
+    background-image: none !important;
+  }
+}
+
+/* Component: Slide titles
+ */
+
+h1,
+h2 {
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #222222;
+  line-height: 1;
+}
+h1 > .cfsg {
+  font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
+  text-transform: lowercase;
+}
+h1 {
+  font-size: 72px;
+}
+h2 {
+  font-size: 28px;
+}
+
+/* Component: Top menu
+ */
+body > nav {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+body > nav > div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body > nav > div > a {
+  -webkit-flex: none;
+  flex: none;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 24px;
+  color: #888;
+  text-transform: lowercase;
+  vertical-align: top;
+}
+body > nav > div > a.home {
+  text-align: left;
+}
+body > nav > div > a.home:before,
+body > nav > div > a.contact:after {
+  display: inline-block;
+  font-size: 28px;
+  height: 24px;
+  width: 24px;
+  color: #222;
+  font-family: 'cfsg-icon-fonts';
+  font-weight: normal;
+  font-style: normal;
+}
+body > nav > div > a.home:before {
+  content: 'h';
+  margin-right: 20px;
+}
+body > nav > div > a.contact:after {
+  content: 'e';
+  margin-left: 20px;
+}
+body > nav > div > a.contact {
+  text-align: right;
+}
+body > nav > div > a.logo {
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  font-style: normal;
+  color: #000;
+  vertical-align: bottom;
+}
+body > nav > div > a.logo > .cfsg {
+  font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  body > nav > div > a.home,
+  body > nav > div > a.contact {
+    font-size: 0;
+  }
+}
+
+/* Page: List
+ */
+
+#list {
+  background-image: url('../images/tools-legal.svg');
+  background-color: #0089c2;
+  background-size: 400px auto;
+  background-position: center 15px;
+  background-attachment: scroll;
+}
+#list header > h1 {
+  color: #fff;
+  margin-top: 50px;
+}
+#list > article > p {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  margin: 20px;
+}
+#list > article > p > a {
+  color: #a4e4ff;
+}
+#list > article > hr {
+  height: 0;
+  margin: 0.5em 20px;
+  border: none;
+  border-top: 1px solid #1a95c8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#list > article > ol {
+  list-style: none;
+  margin: 0 20px;
+  padding: 0;
+}
+#list .template {
+  background-color: #1a95c8;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+#list .template h3 {
+  display: inline-block;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+}
+#list .template h3 a {
+  text-decoration: none;
+  color: #fff;
+}
+#list .template .date {
+  float: right;
+  margin: 0 0 0px 30px;
+  color: #fff;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+}
+#list .template .authors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+#list .template .authors li {
+  display: inline;
+}
+#list .template .authors li:after {
+  content: ', ';
+}
+#list .template .authors li:nth-last-child(2):after,
+#list .template .authors li:last-child:after {
+  content: none;
+}
+#list .template .authors li:first-child:before {
+  content: 'by ';
+}
+#list .template .authors li:last-child:not(:first-child):before {
+  content: '\& ';
+}
+#list .template .tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+#list .template .authors li {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+}
+#list .template .tags {
+  float: right;
+  clear: both;
+  display: inline-block;
+  text-align: right;
+}
+#list .template .tags li {
+  display: block;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+#list .template .tags li span {
+  display: inline-block;
+  padding: 2px 4px;
+  margin-top: 4px;
+}
+#list .template .tags li.developer span,
+#list .template .tags li.developers span {
+  background-color: #0089c2;
+}
+#list .template .tags li.entrepreneur span,
+#list .template .tags li.entrepreneurs span {
+  background-color: #d87e12;
+}
+#list .template .tags li.investor span,
+#list .template .tags li.investors span {
+  background-color: #8b2022;
+}
