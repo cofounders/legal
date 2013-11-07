@@ -255,8 +255,8 @@ body > nav > div > a.logo > .cfsg {
   margin: 0;
 }
 #list .template h3 a {
-  text-decoration: none;
-  color: #fff;
+  text-decoration: underline;
+  color: #a4e4ff;
 }
 #list .template .date {
   float: right;
@@ -330,4 +330,20 @@ body > nav > div > a.logo > .cfsg {
 #list .template .tags li.investor span,
 #list .template .tags li.investors span {
   background-color: #8b2022;
+}
+
+@media (max-width: 768px) {
+  #list .template .date {
+    float: none;
+    margin: 10px 0;
+  }
+  #list .template .tags {
+    float: none;
+    display: block;
+    text-align: left;
+    margin: 6px 0 10px 0;
+  }
+  #list .template .tags li {
+    display: inline-block;
+  }
 }
