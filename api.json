@@ -8,7 +8,8 @@
       "title": "{{ post.title | jsonify }}",
       "url": "{{ post.url | jsonify }}",
       "date": "{{ post.date | date_to_xmlschema }}",
-      "tags": [{% for tag in post.tags %}"{{ tag | jsonify }}",{% endfor %}null]
+      "tags": [{% for tag in post.tags %}"{{ tag | jsonify }}",{% endfor %}null],
+      "authors": [{% for author in post.authors %}"{{ author | jsonify }}",{% endfor %}null]
     },
     {% endfor %}
     null
