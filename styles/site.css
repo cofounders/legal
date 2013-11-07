@@ -3,7 +3,9 @@
 /* Third party fonts
  */
 
-@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Crimson+Text:400italic|Merriweather:300,300italic,900,900italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Crimson+Text:400italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300,300italic,900,900italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:700&subset=latin,latin-ext);
 
 /* Cofounders logo font with custom glyph
  */
@@ -362,7 +364,9 @@ body > nav > div > a.logo > .cfsg {
 #document h4,
 #document h5,
 #document h6 {
-  font-family: Merriweather;
+  font-family: 'Merriweather Sans';
+  font-weight: 700;
+  text-transform: none;
 }
 #document > article {
   background-color: white;
@@ -371,4 +375,10 @@ body > nav > div > a.logo > .cfsg {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  #document > article {
+    padding: 20px;
+  }
 }
