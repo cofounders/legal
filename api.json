@@ -1,6 +1,7 @@
 ---
 ---
 {
+  "created_time": "{{ site.time | date_to_xmlschema }}",
   "templates": [
     {% for post in site.posts %}
     {
