@@ -4,4 +4,4 @@
 
 - [Angel Investment Templates (Debt and Equity)](http://aicalico.com/2013/11/03/angel-investment-templates-debt-and-equity/) by [Huifen Zheng](http://aicalico.com/) [@AiCalico](https://twitter.com/AiCalico‎)
 
-See also: [LICENSE](LICENSE)
+See also: [LICENSE.md](LICENSE.md)
