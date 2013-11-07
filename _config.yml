@@ -3,8 +3,8 @@ lsi: false
 pygments: true
 source: .
 permalink: /:title/
-baseurl: "/legal/"
-url: http://www.cofounders.sg/legal
+baseurl: "/"
+url: http://legal.cf.sg
 exclude:
 - ".*"
 - "*.md"
