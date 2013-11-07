@@ -1,4 +1,4 @@
-# Legal Templates
+# Legal Boilerplate
 
 This is a service to browse and customise the growing collection of legal templates for startups in Singapore.
 

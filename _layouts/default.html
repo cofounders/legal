@@ -1,0 +1,25 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:og="http://ogp.me/ns#"
+  xmlns:fb="http://www.facebook.com/2008/fbml"
+  itemscope itemtype="http://schema.org/WebPage">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }} {% if page.title %} | {% endif %} {{ site.owner.name }}</title>
+  <meta name="description" content="Cofounders is a collective of techies, designers and engineers, who work with startups in Singapore." />
+  <meta name="keywords" content="cofounders, cfsg, singapore, startups, cto, technical cofounder, investment, incubator, accelerator, tis, nrf, funding" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="{{ site.baseurl }}images/favicon.png" />
+  <link rel="stylesheet" href="{{ site.baseurl }}styles/site.css" />
+</head>
+<body>
+  {{content}}
+
+  {% case site.analytics.provider %}
+    {% when "google" %}
+      {% include analytics/google.html %}
+  {% endcase %}
+</body>
+</html>
