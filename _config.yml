@@ -9,6 +9,7 @@ exclude:
 - ".*"
 - "*.md"
 - "Gemfile*"
+- "CNAME"
 
 owner:
   name: Cofounders Pte Ltd
