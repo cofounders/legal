@@ -2,7 +2,7 @@
 
 This is a service to browse and customise the growing collection of legal templates for startups in Singapore.
 
-<http://www.cofounders.sg/legal>
+<http://legal.cf.sg>
 
 ## FAQ
 
