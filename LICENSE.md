@@ -27,3 +27,7 @@ Derived from content licensed from [iStockphoto LP](http://www.istockphoto.com/l
 #### Icon pack
 
 Created using [Fontastic](http://fontastic.me/)
+
+#### League Gothic web font
+
+Published by [Caroline Hadilaksono, Micah Rich, & Tyler Finck](https://github.com/theleagueof/league-gothic)
