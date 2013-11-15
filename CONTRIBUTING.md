@@ -21,3 +21,15 @@ All you need is basic HTML familiarity. Everything can be done through the GitHu
     How to: [Using Pull Requests](https://help.github.com/articles/using-pull-requests)
 
 1. Once reviewed by a committer, the contribution will be merged into the public repository.
+
+### Adding new Legal Templates
+
+>Jekyll `_posts` folder docs: http://jekyllrb.com/docs/posts/
+
+You can add new legal templates the same way as the existing files in the `_posts` folder. Things to note:
+
+- File name must start with the date
+- Contents of the file must start with the YAML front-matter.
+- Template must be document
+
+Try to follow a similar HTML structure if you can. Sorry for the current lack of standardised/documented format.
