@@ -16,20 +16,24 @@ All you need is basic HTML familiarity. Everything can be done through the GitHu
 
     How to: [Fork A Repo](https://help.github.com/articles/fork-a-repo)
 
-1. Use Pull Requests to share your changes.
+1. Place your template in `_posts` and name it according to (Jekyll's file name format)[http://jekyllrb.com/docs/posts/].
+
+    The date will be taken as the date of publication for this document, regardless of when the commits were made.
+
+    For example: `2013-12-25-christmas_letter.html`
+
+1. Ensure the template has the correct YAML front-matter.
+
+    The template property must be set to `document` to be rendered correctly.
+
+    This is also where you list the authors, document tags, and other meta information.
+
+1. Author your legal template by following the HTML structures as defined in [`PRIMITIVES.md`](PRIMITIVES.md).
+
+1. Use Pull Requests to share your tempalte.
 
     How to: [Using Pull Requests](https://help.github.com/articles/using-pull-requests)
 
-1. Once reviewed by a committer, the contribution will be merged into the public repository.
+    All templates are published under [Creative Commons Attribution 3.0 Singapore (CC BY 3.0 SG)](http://creativecommons.org/licenses/by/3.0/sg/deed.en_US). You need to obtain permission from all of the authors who contributed to the template content. List the authors in the YAML front-matter if they wish to be attributed.
 
-### Adding new Legal Templates
-
->Jekyll `_posts` folder docs: http://jekyllrb.com/docs/posts/
-
-You can add new legal templates the same way as the existing files in the `_posts` folder. Things to note:
-
-- File name must start with the date
-- Contents of the file must start with the YAML front-matter.
-- Template must be document
-
-Try to follow a similar HTML structure if you can. Sorry for the current lack of standardised/documented format.
+1. Once reviewed by a committer, the contribution will be merged into the public repository and available to the world.
