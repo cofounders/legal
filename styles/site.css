@@ -435,16 +435,38 @@ body > nav > div > a.logo > .cfsg {
 #document h4,
 #document h5,
 #document h6 {
+  color: #333;
   font-family: 'Merriweather Sans';
   font-weight: 700;
   text-transform: none;
+  margin: 1em 0;
+}
+#document h2 {
+  font-size: 24px;
 }
 #document > article {
+  line-height: 30px;
+  font-size: 18px;
+  color: #333;
   background-color: white;
   margin: 60px auto;
   padding: 60px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#document > article strong {
+  text-transform: uppercase;
+}
+#document > article input {
+  border-style: none;
+  border-bottom: 2px solid #cdcdcd;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: Merriweather;
+  font-size: 18px;
+  width: 250px;
+  padding: 0 0 5px 0;
   box-sizing: border-box;
 }
 
