@@ -136,7 +136,7 @@ Typically used in schedules to an agreement.
 
 ### Text Blocks
 
-    <textarea palceholder="Some Description"></textarea>
+    <textarea placeholder="Some Description"></textarea>
 
 ### Text Fields
 
@@ -145,3 +145,7 @@ Typically used in schedules to an agreement.
 ### Numbers
 
     <input type="number" />
+
+### Date
+
+    <input type="date" />
