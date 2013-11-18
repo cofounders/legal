@@ -54,12 +54,12 @@ These guidelines should help all templates live in peace and harmony.
     ---
     ```
 
-    - The template property must be set to `document` to be rendered correctly.
+    1. The template property must be set to `document` to be rendered correctly.
 
-    - Document tags are used to filter the document listing. The currently supported tags are: `consultant`, `entrepreneur`, and `investor`.
+    1. Document tags are used to filter the document listing. The currently supported tags are: `consultant`, `entrepreneur`, and `investor`.
 
-    - List the authors' names and email/web addresses in the YAML front-matter if they wish to be attributed.
+    1. List the authors' names and email/web addresses in the YAML front-matter if they wish to be attributed.
 
-    - Yo dawg, we heard you like licenses so always specify a license for your license. The recommended license for legal documents in Singapore is [Creative Commons Attribution 3.0 Singapore (CC BY 3.0 SG)](http://creativecommons.org/licenses/by/3.0/sg/deed.en_US). It comes in many other country specific flavours.
+    1. Yo dawg, we heard you like licenses so always specify a license for your license. The recommended license for legal documents in Singapore is [Creative Commons Attribution 3.0 Singapore (CC BY 3.0 SG)](http://creativecommons.org/licenses/by/3.0/sg/deed.en_US). It comes in many other country specific flavours.
 
 1. Author your legal template by following the HTML structures as defined in [`PRIMITIVES.md`](PRIMITIVES.md).
