@@ -524,7 +524,7 @@ body > nav > div > a.logo > .cfsg {
 #document > header .controls {
   -webkit-flex: none;
   flex: none;
-  width: 200px;
+  width: 300px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -730,6 +730,21 @@ body > nav > div > a.logo > .cfsg {
   #document > header {
     padding-right: 5px;
     padding-left: 10px;
+    display: block;
+  }
+  #document > header .controls {
+    width: 100%;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 20px 0 0 0;
+  }
+  #document > header .controls button {
+    -webkit-flex: auto;
+    flex: auto;
+    min-width: 250px;
+    width: auto;
+    margin: 0 10px 10px 10px;
   }
   #document > article {
     padding: 0 20px;
