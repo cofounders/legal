@@ -62,10 +62,12 @@ body > section {
   -webkit-justify-content: flex-start;
   justify-content: flex-start;
 }
-body > section > article {
+body > section > * {
   margin: 0 auto;
   width: 100%;
   max-width: 1024px;
+}
+body > section > article {
   -webkit-flex: auto;
   flex: auto;
   min-height: 300px;
@@ -93,11 +95,36 @@ body > section > article > * {
   }
 }
 
+/* Component: Author attribution
+ */
+
+ul.authors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.authors li {
+  display: inline;
+}
+ul.authors li:after {
+  content: ', ';
+}
+ul.authors li:nth-last-child(2):after,
+ul.authors li:last-child:after {
+  content: none;
+}
+ul.authors li:first-child:before {
+  content: 'by ';
+}
+ul.authors li:last-child:not(:first-child):before {
+  content: '\& ';
+}
+
 /* Component: Slide titles
  */
 
-h1,
-h2 {
+body > section > article h1,
+body > section > article h2 {
   font-family: 'League Gothic', sans-serif;
   text-transform: uppercase;
   font-weight: normal;
@@ -107,15 +134,58 @@ h2 {
   color: #222222;
   line-height: 1;
 }
-h1 > .cfsg {
+body > section > article h1 > .cfsg {
   font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
   text-transform: lowercase;
 }
-h1 {
+body > section > article h1 {
   font-size: 72px;
 }
-h2 {
+body > section > article h2 {
   font-size: 28px;
+}
+
+/* Component: Action button
+ */
+
+button.action {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 40px;
+  border: none;
+  border-radius: 20px;
+  background: none;
+  color: #fff;
+  background-color: #74448e;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 10px 10px 60px;
+}
+button:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'cfsg-icon-fonts';
+  font-size: 30px;
+  color: #fff;
+  display: inline-block;
+  width: 60px;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 40px;
+  text-align: center;
+  padding: 0 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+button.action[disabled] {
+  opacity: 0.5;
 }
 
 /* Component: Details button
@@ -341,26 +411,7 @@ body > nav > div > a.logo > .cfsg {
   font-size: 18px;
 }
 #list .template .authors {
-  list-style: none;
-  margin: 0;
-  padding: 0;
   color: #fff;
-}
-#list .template .authors li {
-  display: inline;
-}
-#list .template .authors li:after {
-  content: ', ';
-}
-#list .template .authors li:nth-last-child(2):after,
-#list .template .authors li:last-child:after {
-  content: none;
-}
-#list .template .authors li:first-child:before {
-  content: 'by ';
-}
-#list .template .authors li:last-child:not(:first-child):before {
-  content: '\& ';
 }
 #list .template .authors a {
   text-decoration: none;
@@ -433,12 +484,69 @@ body > nav > div > a.logo > .cfsg {
   font-family: Merriweather;
   font-size: 18px;
 }
+#document > header {
+  display: -webkit-flex;
+  display: flex;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  align-items: center;
+}
+#document > header .meta {
+  -webkit-flex: auto;
+  flex: auto;
+  color: #eee;
+}
+#document > header .meta h1 {
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin: 0;
+}
+#document > header .meta p,
+#document > header .meta ul {
+  font-style: italic;
+  margin: 0;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+}
+#document > header .meta a {
+  color: #eee;
+  text-decoration: none;
+}
+#document > header .controls {
+  -webkit-flex: none;
+  flex: none;
+  width: 200px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 5px;
+}
+#document > header .controls button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+#document > header .controls button.pdf:before {
+  content: 'h';
+}
+#document > header .controls button.print:before {
+  content: 'g';
+}
 #document > article {
   line-height: 30px;
   font-size: 18px;
   color: #333;
   background-color: white;
-  margin: 60px auto;
+  margin: 0 auto 60px auto;
   padding: 60px 120px;
   text-align: justify;
   -webkit-box-sizing: border-box;
@@ -544,6 +652,7 @@ body > nav > div > a.logo > .cfsg {
 }
 #document > article dfn {
   font-weight: 900;
+  font-style: italic;
 }
 #document > article dfn:before {
   content: open-quote;
@@ -618,8 +727,12 @@ body > nav > div > a.logo > .cfsg {
 }
 
 @media (max-width: 768px) {
+  #document > header {
+    padding-right: 5px;
+    padding-left: 10px;
+  }
   #document > article {
-    padding: 20px;
+    padding: 0 20px;
   }
 }
 

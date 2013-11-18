@@ -3,7 +3,20 @@ layout: menu
 ---
 <section id="document">
   <header>
-    <a href="{{page.license.url}}">{{page.license.name}}</a>
+    <div class="meta">
+      <h1>{{ page.title }}</h1>
+      <ul class="authors">
+        {% for author in page.authors %}
+        <li><a href="{{ author.contact }}">{{ author.name }}</a></li>
+        {% endfor %}
+      </ul>
+      <p class="license">License: <a href="{{ page.license.url }}">{{ page.license.name }}</a></p>
+      <p class="date">Last modified: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time></p>
+    </div>
+    <div class="controls">
+      <button class="action pdf" disabled>Save as PDF</button>
+      <button class="action print" disabled>Print</button>
+    </div>
   </header>
   <article>
     {{content}}
