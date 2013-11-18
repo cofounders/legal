@@ -170,7 +170,7 @@ button:before {
   left: 0;
   top: 0;
   font-family: 'cfsg-icon-fonts';
-  font-size: 30px;
+  font-size: 24px;
   color: #fff;
   display: inline-block;
   width: 60px;
@@ -179,7 +179,7 @@ button:before {
   background-color: rgba(0, 0, 0, 0.3);
   line-height: 40px;
   text-align: center;
-  padding: 0 0 0 0;
+  padding: 4px 0 0 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -536,10 +536,10 @@ body > nav > div > a.logo > .cfsg {
   margin: 10px 0;
 }
 #document > header .controls button.pdf:before {
-  content: 'h';
+  content: 'd';
 }
 #document > header .controls button.print:before {
-  content: 'g';
+  content: 'p';
 }
 #document > article {
   line-height: 30px;
