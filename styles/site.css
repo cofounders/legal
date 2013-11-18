@@ -498,21 +498,22 @@ body > nav > div > a.logo > .cfsg {
   padding: 0 0 0 50px;
   list-style-type: none;
 }
-#document > article ol {
-  counter-reset: section;
-}
-#document > article ol[start="2"] {
-  counter-reset: section 1;
-}
-#document > article ol[start="3"] {
-  counter-reset: section 2;
-}
-#document > article ol[start="4"] {
-  counter-reset: section 3;
-}
-#document > article ol[start="5"] {
-  counter-reset: section 4;
-}
+#document > article ol { counter-reset: section 0; }
+#document > article ol[start="2"] { counter-reset: section 1; }
+#document > article ol[start="3"] { counter-reset: section 2; }
+#document > article ol[start="4"] { counter-reset: section 3; }
+#document > article ol[start="5"] { counter-reset: section 4; }
+#document > article ol[start="6"] { counter-reset: section 5; }
+#document > article ol[start="7"] { counter-reset: section 6; }
+#document > article ol[start="8"] { counter-reset: section 7; }
+#document > article ol[start="9"] { counter-reset: section 8; }
+#document > article ol[start="10"] { counter-reset: section 9; }
+#document > article ol[start="11"] { counter-reset: section 10; }
+#document > article ol[start="12"] { counter-reset: section 11; }
+#document > article ol[start="13"] { counter-reset: section 12; }
+#document > article ol[start="14"] { counter-reset: section 13; }
+#document > article ol[start="15"] { counter-reset: section 14; }
+#document > article ol[start="16"] { counter-reset: section 15; }
 #document > article ol ol {
   padding: 0;
 }
