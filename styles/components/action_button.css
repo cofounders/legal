@@ -17,6 +17,7 @@ button.action {
   font-size: 18px;
   font-weight: 400;
   padding: 10px 10px 10px 60px;
+  cursor: pointer;
 }
 button:before {
   position: absolute;
@@ -39,4 +40,5 @@ button:before {
 }
 button.action[disabled] {
   opacity: 0.5;
+  cursor: default;
 }
