@@ -491,7 +491,8 @@ body > nav > div > a.logo > .cfsg {
 #document > article p {
   margin: 0.5em 0;
 }
-#document > article strong {
+#document > article b {
+  font-weight: 900;
   text-transform: uppercase;
 }
 #document > article ul {

@@ -38,7 +38,7 @@ Paragraphs can be added to explicitly separate blocks of content within a sectio
 
 ## Emphasised Content
 
-    <strong>This is very important</strong>
+    <b>This is very important</b>
 
 Typically the start of a particularly important paragraph.
 
@@ -134,7 +134,7 @@ Typically used in schedules to an agreement.
 
     <ol>
       <li>
-        <p><strong>The Consultant</strong></p>
+        <p><b>The Consultant</b></p>
         <p><input placeholder="Company Name" /></p>
         <p><label>By: <input alt="Signature" type="image" /></label></p>
         <p><label>Name: <input placeholder="Name" /></label></p>
