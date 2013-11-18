@@ -429,34 +429,170 @@ body > nav > div > a.logo > .cfsg {
   font-family: Merriweather;
   font-size: 18px;
 }
-#document h1,
-#document h2,
-#document h3,
-#document h4,
-#document h5,
-#document h6 {
-  color: #333;
-  font-family: 'Merriweather Sans';
-  font-weight: 700;
-  text-transform: none;
-  margin: 1em 0;
-}
-#document h2 {
-  font-size: 24px;
-}
 #document > article {
   line-height: 30px;
   font-size: 18px;
   color: #333;
   background-color: white;
   margin: 60px auto;
-  padding: 60px;
+  padding: 60px 120px;
+  text-align: justify;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+#document > article h1,
+#document > article h2,
+#document > article h3,
+#document > article h4,
+#document > article h5,
+#document > article h6 {
+  color: #333;
+  margin: 1em 0;
+}
+#document > article h1,
+#document > article h2,
+#document > article h3 {
+  font-family: 'Merriweather Sans';
+  font-weight: 700;
+  text-transform: none;
+}
+#document > article h1 {
+}
+#document > article h2 {
+  font-size: 24px;
+}
+#document > article h3 {
+  text-align: center;
+  font-size: 18px;
+}
+#document > article h2 + h3 {
+  margin-top: 0;
+}
+#document > article h4 {
+  margin: 0.5em 0;
+  font-size: 18px;
+}
+#document > article h5 {
+  display: inline-block;
+  margin: 0;
+  font-size: 18px;
+}
+#document > article h5:after {
+  content: '-';
+  margin: 0 1em;
+}
+#document > article p {
+  margin: 0.5em 0;
+}
 #document > article strong {
   text-transform: uppercase;
+}
+#document > article ul {
+  margin: 0.5em 0;
+  padding: 0;
+  list-style-type: none;
+}
+#document > article ol {
+  margin: 0.5em 0;
+  padding: 0 0 0 50px;
+  list-style-type: none;
+}
+#document > article ol {
+  counter-reset: section;
+}
+#document > article ol[start="2"] {
+  counter-reset: section 1;
+}
+#document > article ol[start="3"] {
+  counter-reset: section 2;
+}
+#document > article ol[start="4"] {
+  counter-reset: section 3;
+}
+#document > article ol[start="5"] {
+  counter-reset: section 4;
+}
+#document > article ol ol {
+  padding: 0;
+}
+#document > article ol ol ol {
+  padding: 0 0 0 60px;
+}
+#document > article li {
+  counter-increment: section;
+  position: relative;
+  margin: 1em 0;
+}
+#document > article ol li:before {
+  content: counters(section, '.') '.';
+  position: absolute;
+  left: -50px;
+}
+#document > article li li ol li:before {
+  left: -60px;
+}
+#document > article li ol li {
+}
+#document > article dfn {
+  font-weight: 900;
+}
+#document > article dfn:before {
+  content: open-quote;
+}
+#document > article dfn:after {
+  content: close-quote;
+}
+#document > article a:local-link {
+  border-bottom: 2px dashed #0089c2;
+  background-color: #dff5ff;
+}
+#document > article dl {
+  margin: 0.5em 0;
+}
+#document > article dt {
+  display: inline;
+}
+#document > article dd {
+  display: inline;
+  margin: 0;
+}
+#document > article dd + dt:before {
+  content: '\A';
+  white-space: pre;
+  font-size: 0;
+}
+#document > article table,
+#document > article thead,
+#document > article tbody,
+#document > article tr,
+#document > article td {
+  margin: 0;
+  padding: 0;
+  border-style: none;
+}
+#document > article table {
+  border-spacing: 0;
+  width: 100%;
+}
+#document > article thead {
+  background-color: #bbb;
+}
+#document > article thead tr {
+}
+#document > article thead td {
+  padding: 0.5em;
+  vertical-align: top;
+}
+#document > article tbody {
+}
+#document > article tbody tr {
+}
+#document > article tbody td {
+  padding: 0.5em;
+  vertical-align: top;
+}
+#document > article textarea {
 }
 #document > article input {
   border-style: none;
@@ -466,8 +602,11 @@ body > nav > div > a.logo > .cfsg {
   font-family: Merriweather;
   font-size: 18px;
   width: 250px;
-  padding: 0 0 5px 0;
+  height: 30px;
   box-sizing: border-box;
+  padding: 5px 0;
+  margin: -5px 0;
+  background-color: transparent;
 }
 
 @media (max-width: 768px) {

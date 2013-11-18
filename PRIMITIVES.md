@@ -80,17 +80,21 @@ If the numbered section has a title it should be formatted as follows:
 
 ## Inline Term Definition
 
-    This line of text defines some "<dfn>Term</dfn>" in the document.
+    This line of text defines <dfn id="some-term">Some Term</dfn> in the document.
 
 ## List of Term Definitions
 
     <dl>
-      <dt>"<dfn>Some Term</dfn>" means</dt>
+      <dt id="some-term"><dfn>Some Term</dfn> means</dt>
       <dd>something specific.</dd>
-      <dt>"<dfn>Another Term</dfn>" means</dt>
+      <dt id="another-term"><dfn>Another Term</dfn> means</dt>
       <dd>either this;</dd>
       <dd>or else this.</dd>
     </dl>
+
+## Term Lookup
+
+    This line references <a href="#some-term">Some Term</a> defined elsewhere.
 
 ## Table Listing
 
