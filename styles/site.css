@@ -410,6 +410,10 @@ body > nav > div > a.logo > .cfsg {
   font-style: italic;
   font-size: 18px;
 }
+#list .template .date a {
+  text-decoration: none;
+  color: #fff;
+}
 #list .template .authors {
   color: #fff;
 }

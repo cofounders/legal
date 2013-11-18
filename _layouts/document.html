@@ -10,8 +10,18 @@ layout: menu
         <li><a href="{{ author.contact }}">{{ author.name }}</a></li>
         {% endfor %}
       </ul>
-      <p class="license">License: <a href="{{ page.license.url }}">{{ page.license.name }}</a></p>
-      <p class="date">Last modified: <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date_to_long_string }}</time></p>
+      <p class="license">
+        License:
+        <a href="{{ page.license.url }}">{{ page.license.name }}</a>
+      </p>
+      <p class="date">
+        Published:
+        <a href="{{ site.owner.github }}/legal/commits/gh-pages/{{ page.path }}">
+          <time datetime="{{ page.date | date_to_xmlschema }}">
+            {{ page.date | date_to_long_string }}
+          </time>
+        </a>
+      </p>
     </div>
     <div class="controls">
       <button class="action pdf" disabled>Save as PDF</button>
