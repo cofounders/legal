@@ -362,6 +362,10 @@ body > nav > div > a.logo > .cfsg {
 #list .template .authors li:last-child:not(:first-child):before {
   content: '\& ';
 }
+#list .template .authors a {
+  text-decoration: none;
+  color: #fff;
+}
 #list .template .tags {
   list-style: none;
   margin: 0;
@@ -392,9 +396,9 @@ body > nav > div > a.logo > .cfsg {
   padding: 2px 4px;
   margin-top: 4px;
 }
-#list .template .tags li.developer span,
-#list .template .tags li.developers span {
-  background-color: #0089c2;
+#list .template .tags li.consultant span,
+#list .template .tags li.consultant span {
+  background-color: #74448e;
 }
 #list .template .tags li.entrepreneur span,
 #list .template .tags li.entrepreneurs span {
@@ -458,6 +462,8 @@ body > nav > div > a.logo > .cfsg {
   text-transform: none;
 }
 #document > article h1 {
+  font-size: 48px;
+  margin: 2em 0.5em 3em 0.5em;
 }
 #document > article h2 {
   font-size: 24px;

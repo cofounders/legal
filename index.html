@@ -27,7 +27,7 @@ title: Legal Boilerplate
           </ul>
           <ul class="authors">
             {% for author in post.authors %}
-            <li>{{ author }}</li>
+            <li><a href="{{ author.contact }}">{{ author.name }}</a></li>
             {% endfor %}
           </ul>
         </article>

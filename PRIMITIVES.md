@@ -14,9 +14,15 @@ Turn these semantic HTML structures into Web Components. Custom elements would a
 
 ## Document Title
 
-    <h2>Document Title</h2>
+    <h1>Document Title</h1>
 
-Document titles can be used at the top of the template or for independent section like schedules and appendices.
+Document titles can be used at the top of the template.
+
+## Attachment Titles
+
+    <h2>Attachment Title</h2>
+
+Related documents can be schedules, appendices, or other included documents that are used to support the main template.
 
 ## Section Titles
 
