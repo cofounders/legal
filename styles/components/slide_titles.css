@@ -1,0 +1,24 @@
+/* Component: Slide titles
+ */
+
+body > section > article h1,
+body > section > article h2 {
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #222222;
+  line-height: 1;
+}
+body > section > article h1 > .cfsg {
+  font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
+  text-transform: lowercase;
+}
+body > section > article h1 {
+  font-size: 72px;
+}
+body > section > article h2 {
+  font-size: 28px;
+}

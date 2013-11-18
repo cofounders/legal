@@ -1,0 +1,42 @@
+/* Component: Action button
+ */
+
+button.action {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  min-height: 40px;
+  border: none;
+  border-radius: 20px;
+  background: none;
+  color: #fff;
+  background-color: #74448e;
+  font-family: 'Roboto Slab', serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding: 10px 10px 10px 60px;
+}
+button:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'cfsg-icon-fonts';
+  font-size: 24px;
+  color: #fff;
+  display: inline-block;
+  width: 60px;
+  height: 100%;
+  border-radius: 20px 0 0 20px;
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 40px;
+  text-align: center;
+  padding: 4px 0 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+button.action[disabled] {
+  opacity: 0.5;
+}

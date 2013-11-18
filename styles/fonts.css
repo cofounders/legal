@@ -1,0 +1,41 @@
+/* Third party fonts
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab|Crimson+Text:400,400italic,700italic,600italic);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300,300italic,900,900italic&subset=latin,latin-ext);
+@import url(http://fonts.googleapis.com/css?family=Merriweather+Sans:700&subset=latin,latin-ext);
+
+/* Cofounders logo font with custom glyph
+ */
+
+@font-face {
+  font-family: 'League Gothic';
+  src: url('../fonts/League_Gothic-webfont.eot');
+  src: url('../fonts/League_Gothic-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/League_Gothic-webfont.woff') format('woff'),
+    url('../fonts/League_Gothic-webfont.ttf') format('truetype'),
+    url('../fonts/League_Gothic-webfont.svg#LeagueGothicRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'League Gothic CFSG';
+  src: url('../fonts/LeagueGothic-CFSG.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Font icons
+ */
+
+@font-face {
+  font-family: 'cfsg-icon-fonts';
+  src: url('../fonts/cfsg-icon-fonts.eot');
+  src: url('../fonts/cfsg-icon-fonts.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/cfsg-icon-fonts.ttf') format('truetype'),
+    url('../fonts/cfsg-icon-fonts.svg#cfsg-icon-fonts') format('svg'),
+    url('../fonts/cfsg-icon-fonts.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}

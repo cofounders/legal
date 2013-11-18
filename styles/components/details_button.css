@@ -1,0 +1,63 @@
+/* Component: Details button
+ */
+
+a.details {
+  position: relative;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 80px;
+  padding: 8px 30px 0 95px;
+  border-radius: 40px;
+  text-decoration: none;
+  white-space: nowrap;
+  text-align: center;
+}
+a.details:before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-family: 'cfsg-icon-fonts';
+  font-size: 30px;
+  color: #fff;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border-radius: 40px 0 0 40px;
+  background-color: rgba(0, 0, 0, 0.3);
+  line-height: 80px;
+  text-align: right;
+  padding: 0 15px 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+a.details .cta {
+  display: block;
+  color: #fff;
+  font-family: 'Roboto Slab', serif;
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 -10px 0;
+}
+a.details .cta:only-child {
+  margin-top: 10px;
+}
+a.details .info {
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Crimson Text', serif;
+  font-size: 22px;
+  font-weight: 600;
+  font-style: italic;
+}
+
+@media (max-width: 768px) {
+  a.details {
+    padding-left: 30px;
+  }
+  a.details:before {
+    display: none;
+  }
+}

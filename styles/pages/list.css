@@ -1,0 +1,136 @@
+/* Page: List
+ */
+
+#list {
+  background-image: url('../images/tools-legal.svg');
+  background-color: #0089c2;
+  background-size: 400px auto;
+  background-position: center 15px;
+  background-attachment: scroll;
+}
+#list header > h1 {
+  color: #fff;
+  margin-top: 50px;
+}
+#list > article > p {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  color: #fff;
+  margin: 20px;
+}
+#list > article > p > a {
+  color: #a4e4ff;
+}
+#list > article > hr {
+  height: 0;
+  margin: 0.5em 20px;
+  border: none;
+  border-top: 1px solid #1a95c8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+#list > article > ol {
+  list-style: none;
+  margin: 0 20px;
+  padding: 0;
+}
+#list .template {
+  background-color: #1a95c8;
+  border-radius: 10px;
+  padding: 15px 20px;
+  margin: 20px 0;
+  overflow: hidden;
+}
+#list .template h3 {
+  display: inline-block;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  margin: 0;
+}
+#list .template h3 a {
+  text-decoration: underline;
+  color: #a4e4ff;
+}
+#list .template .date {
+  float: right;
+  margin: 0 0 0px 30px;
+  color: #fff;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+}
+#list .template .date a {
+  text-decoration: none;
+  color: #fff;
+}
+#list .template .authors {
+  color: #fff;
+}
+#list .template .authors a {
+  text-decoration: none;
+  color: #fff;
+}
+#list .template .tags {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+#list .template .authors li {
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+}
+#list .template .tags {
+  float: right;
+  clear: both;
+  display: inline-block;
+  text-align: right;
+}
+#list .template .tags li {
+  display: block;
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+}
+#list .template .tags li span {
+  display: inline-block;
+  padding: 2px 4px;
+  margin-top: 4px;
+}
+#list .template .tags li.consultant span,
+#list .template .tags li.consultant span {
+  background-color: #74448e;
+}
+#list .template .tags li.entrepreneur span,
+#list .template .tags li.entrepreneurs span {
+  background-color: #d87e12;
+}
+#list .template .tags li.investor span,
+#list .template .tags li.investors span {
+  background-color: #8b2022;
+}
+
+@media (max-width: 768px) {
+  #list .template .date {
+    float: none;
+    margin: 10px 0;
+  }
+  #list .template .tags {
+    float: none;
+    display: block;
+    text-align: left;
+    margin: 6px 0 10px 0;
+  }
+  #list .template .tags li {
+    display: inline-block;
+  }
+}

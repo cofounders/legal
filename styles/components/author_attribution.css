@@ -1,0 +1,24 @@
+/* Component: Author attribution
+ */
+
+ul.authors {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+ul.authors li {
+  display: inline;
+}
+ul.authors li:after {
+  content: ', ';
+}
+ul.authors li:nth-last-child(2):after,
+ul.authors li:last-child:after {
+  content: none;
+}
+ul.authors li:first-child:before {
+  content: 'by ';
+}
+ul.authors li:last-child:not(:first-child):before {
+  content: '\& ';
+}

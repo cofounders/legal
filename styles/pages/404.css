@@ -1,0 +1,79 @@
+/* Page: 404
+ */
+
+#error404 {
+  background-color: #8b2022;
+}
+#error404 > article > div {
+  margin-top: 60px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: center;
+  align-items: center;
+}
+#error404 figure {
+  flex: auto;
+  margin: 0;
+  max-width: 400px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  text-align: center;
+}
+#error404 figure a {
+  text-decoration: none;
+  display: inline-block;
+}
+#error404 figure .credit {
+  color: #ff999b;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 18px;
+  padding: 20px;
+}
+#error404 figure img {
+  width: 80%;
+  margin: 0 10%;
+  height: auto;
+}
+#error404 header {
+  flex: none;
+}
+#error404 header > * {
+  text-align: center;
+}
+#error404 header > h1 {
+  font-size: 200px;
+  color: #000;
+}
+#error404 header > q {
+  display: block;
+  color: #000;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 30px;
+}
+#error404 header > .link {
+}
+#error404 header > .link .details {
+  background-color: #d87e12;
+}
+#error404 header > .link .details:before {
+  content: 'h';
+}
+#error404 iframe {
+  width: 100%;
+  max-width: 100%;
+  margin: 60px auto;
+}
+
+@media (max-width: 768px) {
+  #error404 > article > div {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
