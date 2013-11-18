@@ -6,11 +6,9 @@ Permission to use, copy, modify, and/or distribute this software for any purpose
 
 THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-## License Agreements
+## Legal Templates
 
-Copyright &copy; 2013 [Huifen Zheng](http://aicalico.com/), [Bernard Leong](http://www.bernardleong.com/)
-
-[Creative Commons Attribution 3.0 Singapore (CC BY 3.0 SG)](http://creativecommons.org/licenses/by/3.0/sg/deed.en_US)
+For licensing details see each individual template.
 
 ## Miscellaeneous
 
