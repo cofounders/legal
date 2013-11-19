@@ -158,11 +158,13 @@
 #document > article ol ol ol {
   padding: 0 0 0 60px;
 }
+#document > article li {
+  margin: 1em 0;
+  position: relative;
+  overflow: auto;
+}
 #document > article ol li {
   counter-increment: section;
-  position: relative;
-  margin: 1em 0;
-  overflow: auto;
   padding-left: 50px;
 }
 #document > article ol li {
