@@ -222,16 +222,18 @@
 #document > article thead tr {
 }
 #document > article thead th,
-#document > article thead td,
-#document > article tbody th,
-#document > article tbody td {
+#document > article thead td {
   padding: 0.5em;
-  vertical-align: top;
-  font-size: 18px !important;
+  vertical-align: middle;
 }
 #document > article tbody {
 }
 #document > article tbody tr {
+}
+#document > article tbody th,
+#document > article tbody td {
+  padding: 0.5em;
+  vertical-align: top;
 }
 #document > article textarea {
 }

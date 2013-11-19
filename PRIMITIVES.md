@@ -109,9 +109,9 @@ Typically used in schedules to an agreement.
     <table>
       <thead>
         <tr>
-          <td>ID</td>
-          <td>Name</td>
-          <td>Quantity</td>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Quantity</th>
         </tr>
       </thead>
       <tbody>
