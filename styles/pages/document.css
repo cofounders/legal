@@ -206,6 +206,7 @@
 #document > article thead,
 #document > article tbody,
 #document > article tr,
+#document > article th,
 #document > article td {
   margin: 0;
   padding: 0;
@@ -220,17 +221,17 @@
 }
 #document > article thead tr {
 }
-#document > article thead td {
+#document > article thead th,
+#document > article thead td,
+#document > article tbody th,
+#document > article tbody td {
   padding: 0.5em;
   vertical-align: top;
+  font-size: 18px !important;
 }
 #document > article tbody {
 }
 #document > article tbody tr {
-}
-#document > article tbody td {
-  padding: 0.5em;
-  vertical-align: top;
 }
 #document > article textarea {
 }
