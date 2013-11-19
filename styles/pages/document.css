@@ -332,4 +332,8 @@
   * {
     background-color: transparent !important;
   }
+  #document .defining-term {
+    border-bottom: none;
+    padding: 0;
+  }
 }
