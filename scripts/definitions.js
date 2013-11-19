@@ -189,10 +189,18 @@
     // tooltip.appendChild(document.createTextNode(fragment.textContent));
     tooltip.appendChild(fragment);
 
-    var ancestor = nearestAncestor(anchor, ['P', 'LI', 'DL', 'TABLE', 'ARTICLE']);
+    var ancestor = nearestAncestor(
+      anchor,
+      ['P', 'LI', 'DL', 'TABLE', 'ARTICLE']
+    );
     var anchorBounds = anchor.getBoundingClientRect();
     var ancestorBounds = ancestor.getBoundingClientRect();
-    var left = ancestorBounds.left;
+    var left = ancestorBounds.left +
+      parseInt(
+        window.getComputedStyle(ancestor)
+          .getPropertyValue('padding-left'),
+        10
+      );
     var right = ancestorBounds.right;
     var top = document.documentElement.scrollTop + anchorBounds.bottom;
     var maxwidth = right - left;
