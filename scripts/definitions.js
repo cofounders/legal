@@ -184,8 +184,10 @@
     // Create new tooltip
     var tooltip = document.createElement('aside');
     tooltip.setAttribute('id', 'tooltip');
-    tooltip.appendChild(fragment);
+
+    // Inject content
     // tooltip.appendChild(document.createTextNode(fragment.textContent));
+    tooltip.appendChild(fragment);
 
     var ancestor = nearestAncestor(anchor, ['P', 'LI', 'DL', 'TABLE', 'ARTICLE']);
     var anchorBounds = anchor.getBoundingClientRect();
@@ -199,7 +201,6 @@
     tooltip.style.top = top + 'px';
 
     document.body.appendChild(tooltip);
-    console.log(tooltip, left, right);
   };
 
   var article = $('section > article');
