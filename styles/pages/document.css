@@ -107,7 +107,7 @@
   margin-top: 0;
 }
 #document > article h4 {
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
   font-size: 18px;
 }
 #document > article h5 {
@@ -158,18 +158,24 @@
 #document > article ol ol ol {
   padding: 0 0 0 60px;
 }
-#document > article li {
+#document > article ol li {
   counter-increment: section;
   position: relative;
   margin: 1em 0;
+  overflow: auto;
+  padding-left: 50px;
+}
+#document > article ol li {
+  margin-left: -50px;
 }
 #document > article ol li:before {
   content: counters(section, '.') '.';
   position: absolute;
-  left: -50px;
+  left: 0;
 }
-#document > article li li ol li:before {
-  left: -60px;
+#document > article li li li {
+  padding-left: 60px;
+  margin-left: -60px;
 }
 #document > article li ol li {
 }
@@ -240,6 +246,7 @@
 #document > article input {
   border-style: none;
   border-bottom: 2px solid #cdcdcd;
+  border-radius: 0;
   text-align: center;
   text-transform: uppercase;
   font-family: Merriweather;
@@ -248,8 +255,20 @@
   height: 30px;
   box-sizing: border-box;
   padding: 5px 0;
-  margin: -5px 0;
+  margin: 0;
   background-color: transparent;
+}
+
+#document > article aside {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 300px;
+  float: right;
+  background-color: #ffc;
+  margin: 0 0 0 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
 }
 
 #document .defining-term {
@@ -335,7 +354,6 @@
   #document > article {
     padding: 0 20px;
   }
-
   #document > article ol {
     padding: 0 0 0 0;
   }
@@ -367,6 +385,11 @@
     -moz-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
     text-size-adjust: 100%;
+  }
+  #document > article aside {
+    float: none;
+    width: 100%;
+    margin: 10px 0;
   }
 }
 
