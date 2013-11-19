@@ -407,4 +407,7 @@
     border-bottom: none;
     padding: 0;
   }
+  #document > article aside {
+    display: none;
+  }
 }
