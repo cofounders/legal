@@ -171,6 +171,37 @@
     return matches;
   };
 
+  var hideTooltip = function () {
+    // Clean up old tooltip
+    var old = document.getElementById('tooltip');
+    if (old) {
+      old.parentNode.removeChild(old);
+    }
+  };
+
+  var showTooltip = function (anchor, fragment) {
+    hideTooltip();
+    // Create new tooltip
+    var tooltip = document.createElement('aside');
+    tooltip.setAttribute('id', 'tooltip');
+    tooltip.appendChild(fragment);
+    // tooltip.appendChild(document.createTextNode(fragment.textContent));
+
+    var ancestor = nearestAncestor(anchor, ['P', 'LI', 'ARTICLE']);
+    var anchorBounds = anchor.getBoundingClientRect();
+    var ancestorBounds = ancestor.getBoundingClientRect();
+    var left = ancestorBounds.left;
+    var right = ancestorBounds.right;
+    var top = document.documentElement.scrollTop + anchorBounds.bottom;
+    var maxwidth = right - left;
+    tooltip.style.left = left + 'px';
+    tooltip.style.maxWidth = maxwidth + 'px';
+    tooltip.style.top = top + 'px';
+
+    document.body.appendChild(tooltip);
+    console.log(tooltip, left, right);
+  };
+
   var article = $('section > article');
 
   $(article, 'dfn')
@@ -193,6 +224,12 @@
         var anchor = document.createElement('a');
         anchor.classList.add('defining-term');
         anchor.href = '#define-' + definition.label;
+        anchor.addEventListener('mouseover', function (event) {
+          showTooltip(anchor, definition.fragment.cloneNode(true));
+        });
+        anchor.addEventListener('mouseout', function (event) {
+          hideTooltip();
+        });
         range.surroundContents(anchor);
       });
     });

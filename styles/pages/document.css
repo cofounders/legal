@@ -260,6 +260,52 @@
   padding: 0 0.15em;
 }
 
+#tooltip {
+  position: absolute;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 12px 12px 12px 45px;
+  margin: 10px 0;
+  background-color: #dff5ff;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: Merriweather;
+  font-weight: 300;
+  font-size: 14px;
+  font-style: normal;
+  line-height: 1.5;
+  color: #333;
+}
+#tooltip:before {
+  content: 'w';
+  font-family: 'cfsg-icon-fonts';
+  font-size: 18px;
+  color: #333;
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  left: 17px;
+  top: 9px;
+}
+#tooltip * {
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  line-height: inherit;
+  border-radius: 0;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  width: auto;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
 @media (max-width: 768px) {
   #document > header {
     display: block;
