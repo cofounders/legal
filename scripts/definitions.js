@@ -187,7 +187,7 @@
     tooltip.appendChild(fragment);
     // tooltip.appendChild(document.createTextNode(fragment.textContent));
 
-    var ancestor = nearestAncestor(anchor, ['P', 'LI', 'ARTICLE']);
+    var ancestor = nearestAncestor(anchor, ['P', 'LI', 'DL', 'TABLE', 'ARTICLE']);
     var anchorBounds = anchor.getBoundingClientRect();
     var ancestorBounds = ancestor.getBoundingClientRect();
     var left = ancestorBounds.left;
