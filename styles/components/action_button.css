@@ -4,9 +4,6 @@
 button.action {
   position: relative;
   display: inline-block;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   min-height: 40px;
   border: none;
   border-radius: 20px;
@@ -34,9 +31,6 @@ button:before {
   line-height: 40px;
   text-align: center;
   padding: 4px 0 0 0;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 button.action[disabled] {
   opacity: 0.5;

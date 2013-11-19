@@ -28,9 +28,6 @@
   margin: 0.5em 20px;
   border: none;
   border-top: 1px solid #1a95c8;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 #list > article > ol {
   list-style: none;

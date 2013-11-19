@@ -20,9 +20,6 @@ body > nav > div {
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 20px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 body > nav > div > a {
   -webkit-flex: none;

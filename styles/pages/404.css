@@ -17,9 +17,6 @@
   flex: auto;
   margin: 0;
   max-width: 400px;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
   text-align: center;
 }
 #error404 figure a {
