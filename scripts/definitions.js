@@ -4,23 +4,30 @@
 (function (window, undefined) {
 
   // DOM querying utility
-  var $ = function (context, query) {
+  var $ = function (root, query) {
     if (arguments.length === 1) {
-      query = context;
-      context = window.document;
+      // Ignore repeated calls
+      if (Array.isArray(root)) {
+        return root;
+      }
+      // Optional root
+      else {
+        query = root;
+        root = window.document;
+      }
     }
-    if (typeof context === 'string') {
-      context = $(context);
+    if (typeof root === 'string') {
+      root = $(root);
     }
     var parents = [];
-    if (context.length && !Array.isArray(context)) {
-      parents = parents.concat(Array.prototype.slice.call(context));
+    if (root.length && !Array.isArray(root)) {
+      parents = parents.concat(Array.prototype.slice.call(root));
     }
-    else if (Array.isArray(context)) {
-      parents = parents.concat(context);
+    else if (Array.isArray(root)) {
+      parents = parents.concat(root);
     }
     else {
-      parents.push(context);
+      parents.push(root);
     }
     var results = [];
     parents.forEach(function (parent) {
@@ -131,12 +138,63 @@
     return fragment;
   };
 
+  // Traverse the DOM to find matching text ranges
+  var getKeywords = function (root, label) {
+    var matches = [];
+    var boundary = /\W/;
+    var walker = document.createTreeWalker(
+      root[0],
+      NodeFilter.SHOW_TEXT
+    );
+    while (walker.nextNode()) {
+      var textNode = walker.currentNode;
+      var text = textNode.data;
+      var offset = text.indexOf(label);
+      if (offset !== -1 &&
+        // Do not match inside certain elements
+        !nearestAncestor(textNode, ['DFN', 'A', 'H1']) &&
+        // Prevent starting match mid-word
+        (offset === 0 ||
+          boundary.test(text.charAt(offset - 1))
+        ) &&
+        // Prevent ending match mid-word
+        (offset + label.length === text.length ||
+          boundary.test(text.charAt(offset + label.length))
+        )
+      ) {
+        var range = document.createRange();
+        range.setStart(textNode, offset);
+        range.setEnd(textNode, offset + label.length);
+        matches.push(range);
+      }
+    }
+    return matches;
+  };
+
   var article = $('section > article');
 
-  $(article, 'dfn').forEach(function (dfn) {
-    var label = getTerm(dfn);
-    var fragment = getDefinition(dfn);
-    console.log(label, '=', fragment);
-  });
+  $(article, 'dfn')
+    .map(function (dfn) {
+      return {
+        dfn: dfn,
+        label: getTerm(dfn),
+        fragment: getDefinition(dfn)
+      };
+    })
+    .sort(function (a, b) {
+      return b.label.length - a.label.length;
+    })
+    .forEach(function (definition) {
+      // Set the target
+      definition.dfn.setAttribute('id', 'define-' + definition.label);
+      // Inject the reference anchors
+      var ranges = getKeywords(article, definition.label);
+      ranges.forEach(function (range) {
+        var anchor = document.createElement('a');
+        anchor.classList.add('defining-term');
+        anchor.href = '#define-' + definition.label;
+        range.surroundContents(anchor);
+      });
+    });
 
 })(this);
