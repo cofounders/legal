@@ -152,7 +152,9 @@
       var offset = text.indexOf(label);
       if (offset !== -1 &&
         // Do not match inside certain elements
-        !nearestAncestor(textNode, ['DFN', 'A', 'H1']) &&
+        !nearestAncestor(textNode, [
+          'DFN', 'A', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6'
+        ]) &&
         // Prevent starting match mid-word
         (offset === 0 ||
           boundary.test(text.charAt(offset - 1))
