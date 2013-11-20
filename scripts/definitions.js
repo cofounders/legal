@@ -184,6 +184,9 @@
     // Create new tooltip
     var tooltip = document.createElement('aside');
     tooltip.setAttribute('id', 'tooltip');
+    tooltip.addEventListener('touchstart', function (event) {
+      hideTooltip();
+    });
 
     // Inject content
     // tooltip.appendChild(document.createTextNode(fragment.textContent));
@@ -201,8 +204,12 @@
           .getPropertyValue('padding-left'),
         10
       );
+    var verticalScroll = (window.pageYOffset !== undefined) ?
+      window.pageYOffset :
+      (document.documentElement || document.body.parentNode || document.body)
+        .scrollTop;
     var right = ancestorBounds.right;
-    var top = document.documentElement.scrollTop + anchorBounds.bottom;
+    var top = verticalScroll + anchorBounds.bottom;
     var maxwidth = right - left;
     tooltip.style.left = left + 'px';
     tooltip.style.maxWidth = maxwidth + 'px';
