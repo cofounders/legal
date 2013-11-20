@@ -33,7 +33,7 @@ body > nav > div > a {
   color: #888;
   text-transform: lowercase;
   vertical-align: top;
-  height: 24px;
+  height: 30px;
 }
 body > nav > div > a.home {
   text-align: left;
@@ -41,7 +41,7 @@ body > nav > div > a.home {
 body > nav > div > a:first-child:before,
 body > nav > div > a:last-child:after {
   display: inline-block;
-  font-size: 22px;
+  font-size: 24px;
   height: 24px;
   width: 24px;
   color: #222;
@@ -56,7 +56,7 @@ body > nav > div > a:last-child:after {
   margin-left: 20px;
 }
 body > nav > div > a.browse:before {
-  content: 's';
+  content: 'a';
 }
 body > nav > div > a.home:before {
   content: 'h';
