@@ -6,43 +6,71 @@ Restricting document authors is necessary to aid the end user. Some benefits of 
 
 #### Content Formatting
 
-This document does not define any guidelines for the readable content of legal templates. This is left up to the author. It is recommended that any adopted rules are applied consistently throughout the same document. [Style guides](http://en.wikipedia.org/wiki/Style_guide) exist for specific languages, cultures, academic fields, industries, and institutions.
+This document does not define any guidelines for the readable content of legal templates. That is left up to authors. It is recommended that any adopted rules are applied consistently throughout the same document. [Style guides](http://en.wikipedia.org/wiki/Style_guide) exist for specific languages, cultures, academic fields, industries, and institutions.
 
-#### Note: Web Components
+#### Suggestion: W3C Web Components
 
-Turn these semantic HTML structures into Web Components. Custom elements would allow both cleaner semantics, and richer design/behaviour extensions.
+Turn some of these semantic HTML structures into Web Components. Custom elements would allow both cleaner semantics, and richer design/behaviour extensions.
 
-## Document Title
+## Text Content
+
+### Document Title
 
     <h1>Document Title</h1>
 
 Document titles can be used at the top of the template.
 
-## Attachment Titles
+### Attachment Titles
 
     <h2>Attachment Title</h2>
 
 Related documents can be schedules, appendices, or other included documents that are used to support the main template.
 
-## Section Titles
+### Section Titles
 
     <h3>Section Title</h3>
 
 Used for major sections in the document.
 
-## Paragraphs
+### Paragraphs
 
     <p>General text</p>
 
 Paragraphs can be added to explicitly separate blocks of content within a section.
 
-## Emphasised Content
+### Emphasised Content
 
     <b>This is very important</b>
 
 Typically the start of a particularly important paragraph.
 
-## Numbered Section
+## Numbered Sections
+
+### Section Numbering
+
+Displaying nested sections follows rules from the [CSS Lists and Counters Module Level 3](http://www.w3.org/TR/css3-lists/) specification.
+
+1. The first level is `decimal` and ends in a period (`.`).
+
+    Example: `15.` (Section 15)
+
+1. The second level is also `decimal` and ends in a period (`.`). In the document viewer it is shown appended to the first level number.
+
+    Example: `15.3.` (Section 15, subsection 3)
+
+1. The third level drops is `lower-latin` and wrapped in parenthesis.
+
+    Example: `(b)` (Subsection 2)
+
+1. The fourth and consecutive levels are `lower-roman` and wrapped in parenthesis.
+
+    Example: `(xiv)` (Subsection 14)
+
+To reference a nested level, concatenate all the counters.
+
+Example: `15.3(b)(xiv)` (Section 15, subsection 3, subsection 2, subsection 14)
+
+### Top Level Sections
 
     <ol>
       <li>The first section</li>
@@ -58,7 +86,7 @@ If the numbered section has a title it should be formatted as follows:
       </li>
     </ol>
 
-## Numbered Subsection
+### Nested Subsections
 
     <ol>
       <li> <!-- section -->
@@ -84,23 +112,31 @@ If the numbered section has a title it should be formatted as follows:
       </li>
     </ol>
 
-## Inline Term Definition
+## Defined Terms
 
-    This line of text defines <dfn id="some-term">Some Term</dfn> in the document.
+### Inline Term Definition
 
-## List of Term Definitions
+    This line of text defines <dfn>Some Term</dfn> in the document.
+
+### List of Term Definitions
+
+Wrap text in a `<dfn>` tag to identify instances of the same word throughout the template. The [defining term algorithm](http://www.w3.org/TR/html5/text-level-semantics.html#defining-term) is used to determine the matched string.
 
     <dl>
-      <dt id="some-term"><dfn>Some Term</dfn> means</dt>
+      <dt><dfn>Some Term</dfn> means</dt>
       <dd>something specific.</dd>
-      <dt id="another-term"><dfn>Another Term</dfn> means</dt>
+      <dt><dfn>Another Term</dfn> means</dt>
       <dd>either this;</dd>
       <dd>or else this.</dd>
     </dl>
 
-## Term Lookup
+### Term Lookup
 
-    This line references <a href="#some-term">Some Term</a> defined elsewhere.
+A tooltip shows the definition of defined terms used elsewhere in the template.
+
+    This line references <a href="#define-Something">Something</a> defined elsewhere.
+
+Lookup anchors are added automatically. There is no need to manually add them to the template source code.
 
 ## Table Listing
 
