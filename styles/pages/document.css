@@ -266,8 +266,7 @@
 }
 
 #document .defining-term {
-  background-color: #dff5ff;
-  border-bottom: 2px dashed #0089c2;
+  border-bottom: 1px dotted #0089c2;
   text-decoration: none;
   color: inherit;
   padding: 0 0.15em;
