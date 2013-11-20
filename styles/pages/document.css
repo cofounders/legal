@@ -148,7 +148,7 @@
   padding: 0;
 }
 #document > article ol ol ol {
-  padding: 0 0 0 60px;
+  padding: 0 0 0 40px;
 }
 #document > article li {
   margin: 1em 0;
@@ -167,9 +167,15 @@
   position: absolute;
   left: 0;
 }
+#document > article ol ol ol li:before {
+  content: '(' counter(section, lower-latin) ')';
+}
+#document > article ol ol ol ol li:before {
+  content: '(' counter(section, lower-roman) ')';
+}
 #document > article li li li {
-  padding-left: 60px;
-  margin-left: -60px;
+  padding-left: 40px;
+  margin-left: -40px;
 }
 #document > article li ol li {
 }
@@ -201,6 +207,15 @@
   content: '\A';
   white-space: pre;
   font-size: 0;
+}
+#document > article dl ol {
+}
+#document > article dl ol li {
+  padding-left: 40px;
+  margin: 0.5em 0;
+}
+#document > article dl ol li:before {
+  content: counter(section, lower-latin) ')';
 }
 #document > article table,
 #document > article thead,
