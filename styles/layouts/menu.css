@@ -1,0 +1,87 @@
+/* Component: Top menu
+ */
+
+body > nav {
+  margin: 0;
+  padding: 0;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #eee;
+}
+body > nav > div {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  align-items: center;
+  height: 45px;
+  width: 100%;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+body > nav > div > a {
+  -webkit-flex: none;
+  flex: none;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Crimson Text', serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 21px;
+  color: #888;
+  text-transform: lowercase;
+  vertical-align: top;
+  height: 30px;
+}
+body > nav > div > a.home {
+  text-align: left;
+}
+body > nav > div > a:first-child:before,
+body > nav > div > a:last-child:after {
+  display: inline-block;
+  font-size: 24px;
+  height: 24px;
+  width: 24px;
+  color: #222;
+  font-family: 'cfsg-icon-fonts';
+  font-weight: normal;
+  font-style: normal;
+}
+body > nav > div > a:first-child:before {
+  margin-right: 20px;
+}
+body > nav > div > a:last-child:after {
+  margin-left: 20px;
+}
+body > nav > div > a.browse:before {
+  content: 'a';
+}
+body > nav > div > a.home:before {
+  content: 'h';
+}
+body > nav > div > a.contact:after {
+  content: 'e';
+}
+body > nav > div > a:last-child {
+  text-align: right;
+}
+body > nav > div > a.logo {
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  font-style: normal;
+  color: #000;
+}
+body > nav > div > a.logo > .cfsg {
+  font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
+  text-transform: lowercase;
+}
+
+@media (max-width: 768px) {
+  body > nav > div > a:not(.logo) {
+    font-size: 0;
+  }
+}

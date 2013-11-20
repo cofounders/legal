@@ -1,11 +1,11 @@
 @charset 'utf-8';
 @import url(fonts.css);
-@import url(site_structure.css);
+@import url(layouts/default.css);
+@import url(layouts/document.css);
+@import url(layouts/menu.css);
 @import url(components/author_attribution.css);
 @import url(components/slide_titles.css);
 @import url(components/action_button.css);
 @import url(components/details_button.css);
-@import url(components/top_menu.css);
-@import url(pages/list.css);
-@import url(pages/document.css);
+@import url(pages/index.css);
 @import url(pages/404.css);
