@@ -86,6 +86,7 @@
 #document > article h1 {
   font-size: 48px;
   margin: 2em 0.5em 3em 0.5em;
+  line-height: 1.5;
 }
 #document > article h2 {
   font-size: 24px;
@@ -251,7 +252,9 @@
   background-color: transparent;
 }
 
+#document > article .aside,
 #document > article aside {
+  display: inline-block;
   font-family: Delius;
   font-weight: 400;
   font-size: 18px;
@@ -375,6 +378,7 @@
     -webkit-overflow-scrolling: touch;
     white-space: nowrap;
   }
+  #document > article .aside,
   #document > article aside {
     float: none;
     width: 100%;
@@ -394,6 +398,7 @@
     border-bottom: none;
     padding: 0;
   }
+  #document > article .aside,
   #document > article aside {
     display: none;
   }
