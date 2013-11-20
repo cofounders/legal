@@ -145,6 +145,9 @@
 
   // Traverse the DOM to find matching text ranges
   var getKeywords = function (root, label) {
+    if (label === '') {
+      return [];
+    }
     var matches = [];
     var boundary = /\W/;
     var walker = document.createTreeWalker(
