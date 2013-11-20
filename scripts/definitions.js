@@ -150,24 +150,27 @@
       var textNode = walker.currentNode;
       var text = textNode.data;
       var offset = text.indexOf(label);
-      if (offset !== -1 &&
-        // Do not match inside certain elements
-        !nearestAncestor(textNode, [
-          'DFN', 'A', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6'
-        ]) &&
-        // Prevent starting match mid-word
-        (offset === 0 ||
-          boundary.test(text.charAt(offset - 1))
-        ) &&
-        // Prevent ending match mid-word
-        (offset + label.length === text.length ||
-          boundary.test(text.charAt(offset + label.length))
-        )
-      ) {
-        var range = document.createRange();
-        range.setStart(textNode, offset);
-        range.setEnd(textNode, offset + label.length);
-        matches.push(range);
+      while (offset !== -1) {
+        if (
+          // Do not match inside certain elements
+          !nearestAncestor(textNode, [
+            'DFN', 'A', 'H1', 'H2', 'H3', 'H4', 'H5', 'H6'
+          ]) &&
+          // Prevent starting match mid-word
+          (offset === 0 ||
+            boundary.test(text.charAt(offset - 1))
+          ) &&
+          // Prevent ending match mid-word
+          (offset + label.length === text.length ||
+            boundary.test(text.charAt(offset + label.length))
+          )
+        ) {
+          var range = document.createRange();
+          range.setStart(textNode, offset);
+          range.setEnd(textNode, offset + label.length);
+          matches.push(range);
+        }
+        offset = text.indexOf(label, offset + label.length);
       }
     }
     return matches;
