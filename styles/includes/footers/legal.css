@@ -1,0 +1,79 @@
+body > footer {
+  background-color: #333;
+  color: #eee;
+  font-family: 'Roboto Slab', serif;
+  font-size: 14px;
+  font-weight: 400;
+}
+body > footer > article {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  display: -webkit-flex;
+  display: flex;
+  padding: 20px;
+}
+body > footer > article > section {
+  flex: 1;
+  margin-right: 40px;
+}
+body > footer > article > section:last-of-type {
+  margin-right: 0;
+}
+body > footer h2 {
+  font-size: 30px;
+  font-family: 'League Gothic', sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 28px;
+  font-style: normal;
+  margin: 0.5em 0;
+}
+body > footer h2 .cfsg {
+  font-family: 'League Gothic CFSG', 'League Gothic', sans-serif;
+  text-transform: lowercase;
+}
+body > footer p {
+}
+body > footer a {
+  color: #80d9ff;
+  text-decoration: none;
+}
+body > footer .social {
+  font-size: 0;
+}
+body > footer .social:before {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  font-family: 'cfsg-icon-fonts';
+  font-size: 24px;
+  text-decoration: none;
+  color: #eee;
+  margin-right: 5px;
+}
+body > footer .social.facebook:before {
+  content: 'f';
+}
+body > footer .social.github:before {
+  content: 'g';
+}
+body > footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+body > footer li {
+  margin: 1em 0;
+}
+body > footer li a {
+}
+
+@media (max-width: 768px) {
+  body > footer > article {
+    display: block;
+  }
+  body > footer > article > section {
+    display: block;
+  }
+}

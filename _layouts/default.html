@@ -17,6 +17,8 @@
 <body>
   {{content}}
 
+  {% include footers/legal.html %}
+
   {% case site.analytics.provider %}
     {% when "google" %}
       {% include analytics/google.html %}
