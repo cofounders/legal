@@ -195,3 +195,21 @@ Typically used in schedules to an agreement.
 ### Date
 
     <input type="date" />
+
+## Annotations
+
+Add easy to understand comments to explain the intention behind complex legalese. Depending on the containing HTML element, use either `<span class="aside">` or `<aside>` elements.
+
+The `<aside>` element is *Flow content* and therefore not allowed inside `<p>`, `<dd>` elements or other elements that expect *Phrasing content*. Use it only inside `<li>` elements or the top-level container.
+
+Examples:
+
+    <li>
+      <aside>This is easy to read and makes people happy.</aside>
+      Here is the long and dry legalese section that no one ever bothers reading anyway.
+    </li>
+
+    <p>
+      <span class="aside">No worries, just read this.</span>
+      Yet another complicated section which may as well be lorem ipsum to most people.
+    </p>    
