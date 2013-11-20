@@ -107,14 +107,19 @@
     if (ancestor) {
       // Special tactics for definition list groups
       if (ancestor.tagName === 'DL') {
-        var cursor = nearestAncestor(dfn, 'DT');
+        var cursor = nearestAncestor(dfn, ['DT', 'DD']);
 
-        // Find the first DT for this term
-        while (cursor.previousElementSibling &&
-          cursor.previousElementSibling.tagName === 'DT'
-        ) {
-          cursor = cursor.previousElementSibling;
-        }
+        var order = cursor.tagName === 'DD' ?
+          ['DD', 'DT'] : ['DT'];
+
+        order.forEach(function (tag) {
+          // Find the first adjacent sibling of the same tag name
+          while (cursor.previousElementSibling &&
+            cursor.previousElementSibling.tagName === tag
+          ) {
+            cursor = cursor.previousElementSibling;
+          }
+        });
         // Combine multiple DTs
         while (cursor && cursor.tagName === 'DT') {
           fragment.appendChild(cursor.cloneNode(true));
