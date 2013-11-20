@@ -10,7 +10,7 @@ THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH RE
 
 For licensing details see each individual template.
 
-## Miscellaeneous
+## Miscellaneous
 
 #### Belphegor illustration
 
