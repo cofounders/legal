@@ -6,6 +6,9 @@
   font-family: Merriweather;
   font-size: 18px;
 }
+#document [contenteditable]:focus {
+  outline: none;
+}
 #document > header {
   display: -webkit-flex;
   display: flex;
@@ -153,7 +156,8 @@
 #document > article li {
   margin: 1em 0;
   position: relative;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 #document > article ol li {
   counter-increment: section;
