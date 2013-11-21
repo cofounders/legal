@@ -427,6 +427,14 @@
   #document > article input {
     border: none;
   }
+  /** WHY DOESN'T PAGE-BREAK WORK!? **/
+  #document > article h2 {
+	  page-break-before: always;
+  }
+  #document > article h3,
+  #document > article h4 {
+	  page-break-after: avoid;
+  }
 }
 
 @-webkit-keyframes tooltip {
