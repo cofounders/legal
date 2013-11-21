@@ -48,10 +48,18 @@ The authors welcome questions and comments to improve the templates but they are
 
 ## Installing Dependencies
 
+Run all commands from within the source code folder (use `cd <path>` to get there).
+
     gem update --system
     gem install jekyll
     gem install bundler
     bundle install
+
+#### Apple OS X Compatibility
+
+If `bundle` complains about `RedCloth`, install that gem manually.
+
+    gem install RedCloth
 
 #### Windows Compatibility
 
