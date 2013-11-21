@@ -427,7 +427,6 @@
   #document > article input {
     border: none;
   }
-  /** WHY DOESN'T PAGE-BREAK WORK!? **/
   #document > article h2 {
 	  page-break-before: always;
   }
