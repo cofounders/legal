@@ -386,6 +386,9 @@
   #document > article li h4 {
     display: inline-block;
   }
+  #document > article dl ol li {
+    padding-left: 0;
+  }
   #document > article table {
     display: block;
     overflow: auto;

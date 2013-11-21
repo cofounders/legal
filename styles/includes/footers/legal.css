@@ -18,6 +18,7 @@ body > footer > article > section {
   margin-right: 40px;
 }
 body > footer > article > section:last-of-type {
+  flex: 0.7;
   margin-right: 0;
 }
 body > footer h2 {
