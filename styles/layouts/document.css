@@ -340,7 +340,7 @@
   padding: 0;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   #document > header {
     display: block;
   }

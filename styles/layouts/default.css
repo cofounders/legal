@@ -61,3 +61,32 @@ body > section > article > * {
     background-image: none !important;
   }
 }
+
+@media print {
+  html,
+  body {
+    height: auto;
+    width: auto;
+  }
+  body > section,
+  body > section > article {
+    display: block !important;
+
+    padding: 0 !important;
+    margin: 0 !important;
+
+    width: auto !important;
+    min-width: none !important;
+    max-width: none !important;
+
+    height: auto !important;
+    min-height: auto !important;
+    max-height: auto !important;
+  }
+}
+
+@page {
+  size: portrait;
+  margin: 2cm;
+  border-radius: 10px; /* No more paper cuts */
+}
