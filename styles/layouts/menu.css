@@ -30,10 +30,13 @@ body > nav > div > a {
   font-weight: 400;
   font-style: italic;
   font-size: 21px;
-  color: #888;
+  color: #DDD;
   text-transform: lowercase;
   vertical-align: top;
   height: 30px;
+}
+body > nav > div > a:hover {
+	color: #888;
 }
 body > nav > div > a.home {
   text-align: left;
