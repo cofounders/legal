@@ -55,16 +55,16 @@
     // Defining Term algorithm
     // <http://www.w3.org/TR/html5/text-level-semantics.html#defining-term>
 
-    // "If the dfn element has a title attribute, then the exact value of that 
+    // "If the dfn element has a title attribute, then the exact value of that
     //  attribute is the term being defined."
 
     if (dfn.hasAttribute('title')) {
       return dfn.getAttribute('title');
     }
 
-    // "Otherwise, if it contains exactly one element child node and no child 
-    //  Text nodes, and that child element is an abbr element with a title 
-    //  attribute, then the exact value of that attribute is the term being 
+    // "Otherwise, if it contains exactly one element child node and no child
+    //  Text nodes, and that child element is an abbr element with a title
+    //  attribute, then the exact value of that attribute is the term being
     //  defined."
 
     else if (dfn.childNodes.length === 1 &&
@@ -75,7 +75,7 @@
       return dfn.firstChild.getAttribute('title');
     }
 
-    // "Otherwise, it is the exact textContent of the dfn element that gives 
+    // "Otherwise, it is the exact textContent of the dfn element that gives
     //  the term being defined."
 
     else {
@@ -87,7 +87,7 @@
   var getDefinition = function (dfn) {
 
     // Definitions are less clearly described in the spec:
-    // "The paragraph, description list group, or section that is the nearest 
+    // "The paragraph, description list group, or section that is the nearest
     //  ancestor of the dfn element must also contain the definition(s) for the
     //  term given by the dfn element."
 
@@ -152,7 +152,9 @@
     var boundary = /\W/;
     var walker = document.createTreeWalker(
       root[0],
-      NodeFilter.SHOW_TEXT
+      NodeFilter.SHOW_TEXT,
+      null,
+      false
     );
     while (walker.nextNode()) {
       var textNode = walker.currentNode;
