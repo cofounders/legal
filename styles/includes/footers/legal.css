@@ -78,3 +78,9 @@ body > footer li a {
     display: block;
   }
 }
+
+@media print {
+  body > footer {
+    display: none;
+  }
+}
