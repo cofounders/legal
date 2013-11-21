@@ -85,3 +85,9 @@ body > nav > div > a.logo > .cfsg {
     font-size: 0;
   }
 }
+
+@media print {
+  body > nav {
+    display: none;
+  }
+}

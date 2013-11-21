@@ -405,7 +405,6 @@
 }
 
 @media print {
-  body > nav,
   #document > header {
     display: none;
   }
@@ -419,6 +418,10 @@
   #document > article .aside,
   #document > article aside {
     display: none;
+  }
+  #document > article textarea,
+  #document > article input {
+    border: none;
   }
 }
 
