@@ -257,14 +257,18 @@
   border-bottom: 2px solid #cdcdcd;
   border-radius: 0;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-family: Merriweather;
   font-size: 18px;
+  font-weight: 900;
   width: 250px;
   height: 30px;
   padding: 5px 0;
   margin: 0;
   background-color: transparent;
+}
+#document > article input[type=date] {
+	text-transform: uppercase;
 }
 
 #document > article .aside,
