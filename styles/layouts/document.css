@@ -420,7 +420,7 @@
   #document > article aside {
     display: none;
   }
-  #document > input {
+  #document input {
 	  border: none !important;
   }
 }
