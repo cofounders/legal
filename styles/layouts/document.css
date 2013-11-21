@@ -420,6 +420,9 @@
   #document > article aside {
     display: none;
   }
+  #document > input {
+	  border: none !important;
+  }
 }
 
 @-webkit-keyframes tooltip {
