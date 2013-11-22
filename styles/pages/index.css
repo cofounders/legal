@@ -12,6 +12,9 @@
   color: #fff;
   margin-top: 50px;
 }
+#list > article {
+  padding-bottom: 20px;
+}
 #list > article > p {
   font-family: 'Roboto Slab';
   font-style: normal;
@@ -31,7 +34,7 @@
 }
 #list > article > ol {
   list-style: none;
-  margin: 0 20px;
+  margin: 0 20px 0 20px;
   padding: 0;
 }
 #list .template {
