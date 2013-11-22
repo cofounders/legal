@@ -235,6 +235,10 @@
     document.body.appendChild(tooltip);
   };
 
+  var smoothScrollTo = function (anchor) {
+    console.log(anchor, anchor.scrollTop, anchor.hash);
+  };
+
   var article = $('section > article');
 
   $(article, 'dfn')
@@ -262,6 +266,10 @@
         });
         anchor.addEventListener('mouseout', function (event) {
           hideTooltip();
+        });
+        anchor.addEventListener('click', function (event) {
+          event.preventDefault();
+          smoothScrollTo(anchor);
         });
         range.surroundContents(anchor);
       });
