@@ -61,6 +61,8 @@ If `bundle` complains about `RedCloth`, install that gem manually by running `ge
 
 If `gem install` cannot compile native extensions, you might still need to agree to the Xcode EULA. This is typically needed after installing or updating Xcode. Open Xcode to accept the terms, or run `sudo cpp` for the license prompt. Follow the on-screen instructions.
 
+Try running the commands with `sudo` if anything else complains.
+
 #### Windows
 
 Use Ruby 1.9.3 and Pygments.rb 0.5.0
