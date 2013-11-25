@@ -55,13 +55,13 @@ Run all commands from within the source code folder (use `cd <path>` to get ther
     gem install bundler
     bundle install
 
-#### Apple OS X Compatibility
+#### Apple OS X
 
-If `bundle` complains about `RedCloth`, install that gem manually.
+If `bundle` complains about `RedCloth`, install that gem manually by running `gem install RedCloth`.
 
-    gem install RedCloth
+If `gem install` cannot compile native extensions, you might still need to agree to the Xcode EULA. This is typically needed after installing or updating Xcode. Open Xcode to accept the terms, or run `sudo cpp` for the license prompt. Follow the on-screen instructions.
 
-#### Windows Compatibility
+#### Windows
 
 Use Ruby 1.9.3 and Pygments.rb 0.5.0
 
