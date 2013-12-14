@@ -117,6 +117,9 @@
 #document > article p {
   margin: 0.5em 0;
 }
+#document > article p:first-child {
+  margin-top: 0;
+}
 #document > article b {
   font-weight: 900;
   text-transform: uppercase;
