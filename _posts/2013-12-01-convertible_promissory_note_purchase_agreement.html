@@ -31,8 +31,10 @@ tags:
     <ol>
       <li>In this Agreement, except to the extent that the context otherwise requires, the following terms shall have the meanings set forth below:</li>
       <dl>
-        <dt>Qualified Financing</dt>
-        <dd>The issuing of equity securities (<dfn>Equity Securities</dfn>) in a transaction or series of related transactions resulting in aggregate gross proceeds to the Company of at least S$<input type="number" value="1000000" />, including conversion of the Notes and any other indebtedness.</dd>
+        <dt><dfn>Qualified Financing</dfn></dt>
+        <dd>
+          <span class="aside">Determines when the convertible note gets converted. E.g. when the company raises $1M round in the future</span>
+          The issuing of equity securities (<dfn>Equity Securities</dfn>) in a transaction or series of related transactions resulting in aggregate gross proceeds to the Company of at least S$<input type="number" value="1000000" />, including conversion of the Notes and any other indebtedness.</dd>
       </dl>
     </ol>
   </li>
@@ -51,7 +53,14 @@ tags:
   <li>
     <h4>Interest</h4>
     <ol>
-      <li>Interest on the Notes will accrue on an annual basis at the rate of <input type="number" value="5" />% per annum based on a 365 days year.</li>
+      <li>
+        <span class="aside">
+          <p>Interest Rate: This affects how much the investor effectively own when you convert.</p>
+          <p>5% means a $100k investment is treated as $105k value, if you raise a $1M+ round in exactly a year.</p>
+          <p>Most of the time this doesn’t matter that much so of the 3 main negotiation points, this would be the least I am concerned with as a founder.</p>
+        </span>
+        Interest on the Notes will accrue on an annual basis at the rate of <input type="number" value="5" />% per annum based on a 365 days year.
+      </li>
     </ol>
   </li>
   <li>
@@ -59,8 +68,19 @@ tags:
     <ol>
       <li>The lesser of
         <ol>
-          <li><input type="number" value="70" />% of the per share price paid by the purchasers of such Equity Securities in the Qualified Financing (the <dfn>Discounted Conversion Price</dfn>), or</li>
-          <li>the price per share equal to S$<input type="number" value="4000000" /> divided by the aggregate number of outstanding shares of the Company’s Common Stock as of immediately after the initial closing of the Qualified Financing (assuming full conversion or exercise of all convertible and exercisable securities then outstanding other than the Notes) (the <dfn>Valuation Cap</dfn>)].</li>
+          <li>
+            <span class="aside">
+              <p>Discount Rate: i.e. if you raise the next round at $3M valuation, the current round investor effectively invested at 70% x $3M = $2.1M valuation.</p>
+              <p>Useful for SEED round since no one really knows how to value companies properly and this saves all the back-and-forth debate on the right valuation and valuation methodology.</p>
+            </span>
+            <input type="number" value="70" />% of the per share price paid by the purchasers of such Equity Securities in the Qualified Financing (the <dfn>Discounted Conversion Price</dfn>), or
+          </li>
+          <li>
+            <span class="aside">
+              The CAP – this gives investor upside if you hit the ball out of the park. i.e. if you raise the next round at $20M, the current investors would still have invested at $5M, and has 4x their value (instead of 30% discount)
+            </span>
+            the price per share equal to S$<input type="number" value="4000000" /> divided by the aggregate number of outstanding shares of the Company’s Common Stock as of immediately after the initial closing of the Qualified Financing (assuming full conversion or exercise of all convertible and exercisable securities then outstanding other than the Notes) (the <dfn>Valuation Cap</dfn>).
+          </li>
         </ol>
       </li>
     </ol>
@@ -81,7 +101,9 @@ tags:
   <li>
     <h4>Sale of the Company</h4>
     <ol>
-      <li>If a Qualified Financing has not occurred and the Company elects to consummate a sale of the Company prior to the Maturity Date, then upon the election of the Investor, either
+      <li>
+        <span class="aside">If company sells before raising next big round. Investors get 1.5x or the exit value, whichever is higher.</span>
+        If a Qualified Financing has not occurred and the Company elects to consummate a sale of the Company prior to the Maturity Date, then upon the election of the Investor, either
         <ol>
           <li>the Investor shall receive a payment equal to one and half (1.5) times the Note, or</li>
           <li>the entire Investment Amount shall convert into Equity Securities at the Valuation Cap.</li>
@@ -92,13 +114,25 @@ tags:
   <li>
     <h4>Pre-Payment</h4>
     <ol>
-      <li>The principal and accrued interest may not be prepaid unless approved in writing by Investors holding Notes whose aggregate principal amount represents a majority of the outstanding principal amount of all then-outstanding Notes (the <dfn>Requisite Holders</dfn>).</li>
+      <li>
+        <span class="aside">
+          <p>This says you can’t just pay back the money with interest and buy the investor out.</p>
+          <p>You’d be a douche if you try to sneak in a “i-can-buy-out-the-investor”, I immediately walk away from a deal if someone try to sneak that in intentionally.</p>
+        </span>
+        The principal and accrued interest may not be prepaid unless approved in writing by Investors holding Notes whose aggregate principal amount represents a majority of the outstanding principal amount of all then-outstanding Notes (the <dfn>Requisite Holders</dfn>).
+      </li>
     </ol>
   </li>
   <li>
     <h4>Participation Rights</h4>
     <ol>
-      <li>After converting to Equity Securities upon the conditions laid out in clause 6 and 7, Investor will have the rights to participate in subsequent financing rounds of the Company in order to maintain their percentage (%) shareholding in the Company.</li>
+      <li>
+        <span class="aside">
+          <p>Also known as “pro-rata rights”. This gives investor the pre-emptive rights to be invest in your future rounds before other people do, to maintain their shareholding %.</p>
+          <p>You can try to negotiate this out, but I won’t advice it. This is a fair and important clause for any serious smart investor, and it would be fair to offer this even if most investors (esp angels) won’t exercise it.</p>
+        </span>
+        After converting to Equity Securities upon the conditions laid out in clause 6 and 7, Investor will have the rights to participate in subsequent financing rounds of the Company in order to maintain their percentage (%) shareholding in the Company.
+      </li>
     </ol>
   </li>
   <li>
