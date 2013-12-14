@@ -166,7 +166,7 @@
           !nearestAncestor(textNode, [
             'DFN', 'A',
             'THEAD',
-            'H1', 'H2', 'H3', 'H4', 'H5', 'H6'
+            'H1', 'H2', 'H3', 'H4', // 'H5', 'H6'
           ]) &&
           // Prevent starting match mid-word
           (offset === 0 ||
