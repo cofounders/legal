@@ -346,6 +346,15 @@
   margin: 0;
   padding: 0;
 }
+#tooltip aside,
+#tooltip .aside {
+  display: none;
+}
+#tooltip li {
+  display: list-item;
+  list-style-type: disc;
+  margin-left: 20px;
+}
 
 @media screen and (max-width: 768px) {
   #document > header {
