@@ -7,7 +7,6 @@ var document = window.document;
 
 $('input').forEach(function (input) {
   input.addEventListener('input', function (event) {
-    console.log('hilarity');
     $('input')
       .filter(function (target) {
         return target.placeholder === input.placeholder;
