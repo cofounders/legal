@@ -257,6 +257,9 @@
   padding: 0.5em;
   vertical-align: top;
 }
+#document > article th {
+  text-align: left;
+}
 #document > article textarea {
 }
 #document > article input {
