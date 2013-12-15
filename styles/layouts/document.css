@@ -352,6 +352,9 @@
   margin: 0;
   padding: 0;
 }
+#tooltip a {
+  text-decoration: none;
+}
 #tooltip aside,
 #tooltip .aside {
   display: none;

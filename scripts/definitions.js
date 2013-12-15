@@ -159,6 +159,15 @@
       hideTooltip();
     });
 
+    // Strip input tags
+    $(fragment, 'input').forEach(function (input) {
+      var parent = input.parentNode;
+      var value = input.value || input.placeholder;
+      var text = document.createTextNode(value);
+      parent.insertBefore(text, input);
+      parent.removeChild(input);
+    });
+
     // Inject content
     // tooltip.appendChild(document.createTextNode(fragment.textContent));
     tooltip.appendChild(fragment);
@@ -215,7 +224,7 @@
         anchor.classList.add('defining-term');
         anchor.href = '#define-' + definition.label;
         anchor.addEventListener('mouseover', function (event) {
-          showTooltip(anchor, getDefinition(definition.dfn).cloneNode(true));
+          showTooltip(anchor, getDefinition(definition.dfn));
         });
         anchor.addEventListener('mouseout', function (event) {
           hideTooltip();
