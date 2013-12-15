@@ -66,6 +66,9 @@ body > section > article > * {
 }
 
 @media print {
+  html {
+    font-size: 0.75px;
+  }
   html,
   body {
     height: auto;

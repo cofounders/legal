@@ -431,9 +431,6 @@
 }
 
 @media print {
-  html {
-    font-size: 0.75px;
-  }
   #document > header {
     display: none;
   }
