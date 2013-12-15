@@ -451,6 +451,10 @@
   #document > article input {
     border: none;
   }
+  #document > article h1 {
+    line-height: 1.25;
+    margin: 0 0.5em 0.75em 0.5em;
+  }
   #document > article h2 {
 	  page-break-before: always;
   }
