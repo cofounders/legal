@@ -12,6 +12,9 @@
   -ms-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
+html {
+  font-size: 1px; /* rem == px */
+}
 html,
 body {
   margin: 0;

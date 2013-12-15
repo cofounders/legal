@@ -4,7 +4,7 @@
 #document {
   background-color: #0089c2;
   font-family: Merriweather;
-  font-size: 18px;
+  font-size: 18rem;
 }
 #document [contenteditable]:focus {
   outline: none;
@@ -27,7 +27,7 @@
 #document > header .meta h1 {
   color: #fff;
   font-family: 'Roboto Slab', serif;
-  font-size: 24px;
+  font-size: 24rem;
   font-weight: 400;
   margin: 0;
 }
@@ -38,7 +38,7 @@
   font-family: 'Crimson Text', serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 18px;
+  font-size: 18rem;
 }
 #document > header .meta a {
   color: #eee;
@@ -62,8 +62,8 @@
   content: 'p';
 }
 #document > article {
-  line-height: 30px;
-  font-size: 18px;
+  line-height: 30rem;
+  font-size: 18rem;
   color: #333;
   background-color: white;
   margin: 0 auto 60px auto;
@@ -87,28 +87,28 @@
   text-transform: none;
 }
 #document > article h1 {
-  font-size: 48px;
+  font-size: 48rem;
   margin: 2em 0.5em 3em 0.5em;
   line-height: 1.5;
 }
 #document > article h2 {
-  font-size: 24px;
+  font-size: 24rem;
 }
 #document > article h3 {
   text-align: center;
-  font-size: 18px;
+  font-size: 18rem;
 }
 #document > article h2 + h3 {
   margin-top: 0;
 }
 #document > article h4 {
   margin: 0 0 0.5em 0;
-  font-size: 18px;
+  font-size: 18rem;
 }
 #document > article h5 {
   display: inline-block;
   margin: 0;
-  font-size: 18px;
+  font-size: 18rem;
 }
 #document > article h5:after {
   content: '-';
@@ -269,7 +269,7 @@
   text-align: center;
   text-transform: capitalize;
   font-family: Merriweather;
-  font-size: 18px;
+  font-size: 18rem;
   font-weight: 900;
   width: 250px;
   height: auto;
@@ -286,8 +286,8 @@
   display: inline-block;
   font-family: Delius;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 18rem;
+  line-height: 24rem;
   text-align: left;
   background-color: #ffc;
   padding: 1em;
@@ -317,7 +317,7 @@
   display: block;
   font-family: Merriweather;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 14rem;
   font-style: normal;
   line-height: 1.5;
   color: #333;
@@ -328,7 +328,7 @@
 #tooltip:before {
   content: 'w';
   font-family: 'cfsg-icon-fonts';
-  font-size: 18px;
+  font-size: 18rem;
   color: #333;
   display: inline-block;
   width: 18px;
@@ -385,7 +385,7 @@
     margin: 0 10px 10px 10px;
   }
   #document > article h1 {
-    font-size: 36px;
+    font-size: 36rem;
     margin: 3em 0;
   }
   #document > article {
@@ -431,6 +431,9 @@
 }
 
 @media print {
+  html {
+    font-size: 0.75px;
+  }
   #document > header {
     display: none;
   }
