@@ -279,6 +279,12 @@
 #document > article input[type=date] {
 	text-transform: uppercase;
 }
+#document > article input:invalid {
+  border-bottom-color: #d00;
+}
+#document > article .shadow-input {
+  display: none;
+}
 
 #document > article .aside,
 #document > article aside {
@@ -447,9 +453,11 @@
   #document > article aside {
     display: none;
   }
-  #document > article textarea,
-  #document > article input {
-    border: none;
+  #document > article input:valid {
+    display: none;
+  }
+  #document > article .shadow-input {
+    display: inline;
   }
   #document > article h1 {
     line-height: 1.25;
