@@ -211,7 +211,7 @@
 
     var ancestor = nearestAncestor(
       anchor,
-      ['P', 'LI', 'DL', 'TABLE', 'ARTICLE']
+      ['P', 'LI', 'DL', 'TD', 'TABLE', 'ARTICLE']
     );
     var anchorBounds = anchor.getBoundingClientRect();
     var ancestorBounds = ancestor.getBoundingClientRect();
