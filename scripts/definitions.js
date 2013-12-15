@@ -3,52 +3,6 @@
 
 (function (window, undefined) {
 
-  // DOM querying utility
-  var $ = function (root, query) {
-    if (arguments.length === 1) {
-      // Ignore repeated calls
-      if (Array.isArray(root)) {
-        return root;
-      }
-      // Optional root
-      else {
-        query = root;
-        root = window.document;
-      }
-    }
-    if (typeof root === 'string') {
-      root = $(root);
-    }
-    var parents = [];
-    if (root.length && !Array.isArray(root)) {
-      parents = parents.concat(Array.prototype.slice.call(root));
-    }
-    else if (Array.isArray(root)) {
-      parents = parents.concat(root);
-    }
-    else {
-      parents.push(root);
-    }
-    var results = [];
-    parents.forEach(function (parent) {
-      var nodelist = parent.querySelectorAll(query);
-      results = results.concat(Array.prototype.slice.call(nodelist));
-    });
-    return results;
-  };
-
-  // Finds the first tag, matched by name, up the ancestry chain
-  var nearestAncestor = function (descendant, tagNames) {
-    if (!Array.isArray(tagNames)) {
-      tagNames = [tagNames];
-    }
-    var ancestor = descendant;
-    do {
-      ancestor = ancestor.parentNode;
-    } while (ancestor && tagNames.indexOf(ancestor.tagName) === -1);
-    return ancestor;
-  };
-
   // Find the defining term for a <dfn/> element
   var getTerm = function (dfn) {
 
@@ -93,7 +47,7 @@
 
     var fragment = document.createDocumentFragment();
 
-    var ancestor = nearestAncestor(dfn, [
+    var ancestor = $.nearestAncestor(dfn, [
       // In the spec
       'P', 'DL', 'SECTION',
       // Not in the spec but just makes sense
@@ -107,7 +61,7 @@
     if (ancestor) {
       // Special tactics for definition list groups
       if (ancestor.tagName === 'DL') {
-        var cursor = nearestAncestor(dfn, ['DT', 'DD']);
+        var cursor = $.nearestAncestor(dfn, ['DT', 'DD']);
 
         var order = cursor.tagName === 'DD' ?
           ['DD', 'DT'] : ['DT'];
@@ -163,7 +117,7 @@
       while (offset !== -1) {
         if (
           // Do not match inside certain elements
-          !nearestAncestor(textNode, [
+          !$.nearestAncestor(textNode, [
             'DFN', 'A',
             'THEAD',
             'H1', 'H2', 'H3', 'H4', // 'H5', 'H6'
@@ -209,7 +163,7 @@
     // tooltip.appendChild(document.createTextNode(fragment.textContent));
     tooltip.appendChild(fragment);
 
-    var ancestor = nearestAncestor(
+    var ancestor = $.nearestAncestor(
       anchor,
       ['P', 'LI', 'DL', 'TD', 'TABLE', 'ARTICLE']
     );
@@ -245,8 +199,7 @@
     .map(function (dfn) {
       return {
         dfn: dfn,
-        label: getTerm(dfn),
-        fragment: getDefinition(dfn)
+        label: getTerm(dfn)
       };
     })
     .sort(function (a, b) {
@@ -262,7 +215,7 @@
         anchor.classList.add('defining-term');
         anchor.href = '#define-' + definition.label;
         anchor.addEventListener('mouseover', function (event) {
-          showTooltip(anchor, definition.fragment.cloneNode(true));
+          showTooltip(anchor, getDefinition(definition.dfn).cloneNode(true));
         });
         anchor.addEventListener('mouseout', function (event) {
           hideTooltip();
