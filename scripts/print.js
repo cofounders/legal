@@ -12,19 +12,34 @@ with (document.querySelector('button.action.print')) {
   removeAttribute('disabled');
 }
 
-var getContent = function (input) {
-  return input.validity.valid ?
-    (input.value || input.placeholder) : '';
+var formatContent = function (input, shadow) {
+  if (input.validity.valid && input.value.length > 0) {
+    switch (input.type) {
+      case 'number':
+        shadow.textContent = input.valueAsNumber.toLocaleString();
+        break;
+      case 'date':
+        shadow.textContent = input.valueAsDate.toLocaleDateString();
+        break;
+      default:
+        shadow.textContent = input.value;
+    }
+  } else {
+    shadow.textContent = input.placeholder;
+  }
 };
 
 $('input').forEach(function (input) {
   var shadow = document.createElement('span');
   shadow.classList.add('shadow-input');
-  shadow.textContent = getContent(input);
-  input.parentNode.insertBefore(shadow, input);
+
+  formatContent(input, shadow);
+
   input.addEventListener('input', function (event) {
-    shadow.textContent = getContent(input);
+    formatContent(input, shadow);
   });
+
+  input.parentNode.insertBefore(shadow, input);
 });
 
 })(this);
