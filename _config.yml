@@ -4,7 +4,7 @@ pygments: true
 source: .
 permalink: /:title/
 baseurl: "/"
-url: http://legal.cf.sg
+url: https://legal.cf.sg
 exclude:
 - ".*"
 - "*.md"
@@ -13,8 +13,8 @@ exclude:
 
 owner:
   name: Cofounders Pte Ltd
-  contact: mailto:hello@cofounders.sg
-  website: http://www.cofounders.sg
+  contact: mailto:hello@cf.sg
+  website: https://cf.sg
   github: https://github.com/cofounders
   facebook: https://www.facebook.com/cofounders.sg
 

@@ -47,7 +47,7 @@ These guidelines should help all templates live in peace and harmony.
       url: http://creativecommons.org/licenses/by/3.0/sg/deed.en_US
     authors:
       - name: Cofounders Pte Ltd
-        contact: http://www.cofounders.sg/
+        contact: https://cf.sg
     tags:
       - consultant
       - entrepreneur
